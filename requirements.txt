@@ -1,0 +1,3 @@
+Requirement:
+  1. Retreive and Print out data for said ticker
+  2. Be able to plot different information from data using MatPlotlib.
