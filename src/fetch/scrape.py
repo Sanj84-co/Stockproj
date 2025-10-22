@@ -1,5 +1,5 @@
 import yfinance as yf 
 def take(str):
     data = yf.download(str)
-    print(data)
+    return (data)
 
