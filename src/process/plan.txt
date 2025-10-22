@@ -1,0 +1,2 @@
+I just want to call the Yfinance api to give me info on the stock that the users want and then 
+configure the data, clean it then I want to be able to chart out the data dependeding on the time and input that the users give.
