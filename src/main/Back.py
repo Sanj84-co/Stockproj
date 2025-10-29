@@ -32,7 +32,7 @@ def calculate(data2, dat, str ):
     st1 = np.array(dat[graph])
     st2 = np.array(data2[graph])
     fig,ax = MatPlot.subplots()
-    if 
+    if ddad
 op = input("Do you want to perform an operation on two datasets(T/F): ") # i want to take in input as operation and then perform this operation on two data sets . for example,you can compare microsoft and AAPL based off their data through a scatterplot.
 if op == "True":
     operation = input("what type: ")
