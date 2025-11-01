@@ -14,8 +14,6 @@ def option():
     " 2. Want to compare Stock data between two stocks\n" 
     " 3. Choose and analyze any of technical indicators below\n" 
     " Moving Value Average, Ichimoku Cloud , Relative Strength Index, Volume Weighted Average Price")
-
-
 def graphit(dat,str,fig,ax):
     graph = input("What type of data on your ticker do you want for to be plotted:")
     graph2 = input("What type of data on your ticker do you want for to be plotted:")
@@ -24,10 +22,14 @@ def graphit(dat,str,fig,ax):
     new2 = np.array(dat[graph2])
     np.diff(new2)
     df = pd.DataFrame(dat)
-    df = df.xs(str ,level='Ticker',axis=1) #So df has one row which dalled date and two columns which have levels in each, price which is level 0 and contaisn [close, open, ...etc...] whereas level1 contains ticker and 'appl' so basically, you remove levl one and make the level 0 a column 
+    df = df.xs(str ,level='Ticker',axis=1)
+    print(df.columns) #So df has one row which dalled date and two columns which have levels in each, price which is level 0 and contaisn [close, open, ...etc...] whereas level1 contains ticker and 'appl' so basically, you remove levl one and make the level 0 a column 
     sns.catplot(data=df,x='Close')
     #MatPlot.show()
     #fig,ax = MatPlot.subplots()
+    df2 =  abs(df['Open']-df['Close']) #try to convert the dates into time. first retreive the dates by themselves
+    MatPlot.bar(df['Close'],height=df2,width=0.8,align='center')
+    #MatPlot.show()
     ax.scatter(new,new,c = "#1f77b4",marker=".",linewidths= 1.5, edgecolors = 'face', colorizer='none',plotnonfinite = False)
     ax.grid(True)
     ax.set_xlabel(graph)
@@ -36,7 +38,7 @@ def graphit(dat,str,fig,ax):
     fig.tight_layout()
     #MatPlot.show()
     return new
-option()
+#option()
 new = graphit(dat,str,fig,ax)
 dap = take('MSFT')
 nip = np.array(dap['Close'])
@@ -57,6 +59,3 @@ if op == "T":
     stoc = input("what stock")
     data2 = take(stoc)
     calculate(data2,dat,op)
-
-
-

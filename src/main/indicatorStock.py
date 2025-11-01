@@ -7,5 +7,6 @@ class stockalgo:
         for i in enumerate(prices):
             sum+=i
         return sum/period
-    def 
+    def ichiMoku(self,prices,period):
+        
 
