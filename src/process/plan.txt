@@ -1,2 +1,4 @@
 I just want to call the Yfinance api to give me info on the stock that the users want and then 
 configure the data, clean it then I want to be able to chart out the data dependeding on the time and input that the users give.
+
+For dates, ask the user for how much period of time they want and find that range, convert it to an array of point for that range so that it acts as the x axis when you are trying to graph the candlestick.
