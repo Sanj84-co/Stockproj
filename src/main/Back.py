@@ -4,7 +4,8 @@ import matplotlib.pyplot as MatPlot
 import numpy as np
 import pandas as pd 
 import seaborn as sns
-
+import datetime 
+from datetime import datetime
 str = input("Please tell which stocks' data you want ")
 dat = take(str)
 fig,ax = MatPlot.subplots()
@@ -59,3 +60,10 @@ if op == "T":
     stoc = input("what stock")
     data2 = take(stoc)
     calculate(data2,dat,op)
+def period():
+    period = input("to what specific amount of days do you want your data to be reflected on:")
+    duration = datetime.timedelta(days= period)
+    today = datetime.today().strftime("%Y/%M/%D")
+    today = datetime.now(today)
+    sub = today-duration
+
