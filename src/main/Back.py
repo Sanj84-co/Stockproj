@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd 
 import seaborn as sns
 import datetime 
-from datetime import datetime
+from datetime import timedelta, date, datetime,time
 str = input("Please tell which stocks' data you want ")
 dat = take(str)
 fig,ax = MatPlot.subplots()
@@ -44,13 +44,13 @@ new = graphit(dat,str,fig,ax)
 dap = take('MSFT')
 nip = np.array(dap['Close'])
 ax.scatter(new,nip,c = 'red',marker=".",linewidths= 1.5, edgecolors = 'face', colorizer='none',plotnonfinite = False)
-MatPlot.show()
+#MatPlot.show()
 def calculate(data2, dat, str ):
     graph = input("What type of data of each stock do you want to compare")
     st1 = np.array(dat[graph])
     st2 = np.array(data2[graph])
     fig,ax = MatPlot.subplots()
-    ax.scatter(st1[:-1],st2[:-1],c = "#1f77b4",marker=".",linewidths= 1.5, edgecolors = 'face', colorizer='none',plotnonfinite = False)
+   # ax.scatter(st1[:-1],st2[:-1],c = "#1f77b4",marker=".",linewidths= 1.5, edgecolors = 'face', colorizer='none',plotnonfinite = False)
     ax.grid(True)
     fig.tight_layout()
     MatPlot.show()
@@ -61,9 +61,16 @@ if op == "T":
     data2 = take(stoc)
     calculate(data2,dat,op)
 def period():
-    period = input("to what specific amount of days do you want your data to be reflected on:")
-    duration = datetime.timedelta(days= period)
-    today = datetime.today().strftime("%Y/%M/%D")
-    today = datetime.now(today)
-    sub = today-duration
-
+    period4 = input("to what specific amount of days do you want your data to be reflected on:")
+    duration = timedelta(days=int(period4))
+    today = date.today()
+    sub = today-duration + timedelta(days = 1)
+    print(sub)
+    candlestick(sub,period4)
+def candlestick(start, enduration):
+    ab = datetime.combine(start, time())
+    ba =  ab.timestamp()
+    MatPlot.bar(ba,10,0.8, 'center')
+    MatPlot.show()
+    return "hello"
+period()
