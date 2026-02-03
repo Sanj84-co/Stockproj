@@ -1,13 +1,14 @@
 
 from src.fetch.scrape import take
 import matplotlib.pyplot as MatPlot
+import matplotlib.dates as md
 import numpy as np
 import pandas as pd 
 import seaborn as sns
 import datetime 
 from datetime import timedelta, date, datetime,time
-str = input("Please tell which stocks' data you want ")
-dat = take(str)
+strs = input("Please tell which stocks' data you want ")
+dat = take(strs)
 fig,ax = MatPlot.subplots()
 def option():
     str =  input("These are the options that you have\n"         
@@ -15,7 +16,7 @@ def option():
     " 2. Want to compare Stock data between two stocks\n" 
     " 3. Choose and analyze any of technical indicators below\n" 
     " Moving Value Average, Ichimoku Cloud , Relative Strength Index, Volume Weighted Average Price")
-def graphit(dat,str,fig,ax):
+def graphit(dat,strs,fig,ax):
     graph = input("What type of data on your ticker do you want for to be plotted:")
     graph2 = input("What type of data on your ticker do you want for to be plotted:")
     new = np.array(dat[graph])
@@ -23,7 +24,8 @@ def graphit(dat,str,fig,ax):
     new2 = np.array(dat[graph2])
     np.diff(new2)
     df = pd.DataFrame(dat)
-    df = df.xs(str ,level='Ticker',axis=1)
+    df =df.xs(strs ,level='Ticker',axis=1)
+   
     print(df.columns) #So df has one row which dalled date and two columns which have levels in each, price which is level 0 and contaisn [close, open, ...etc...] whereas level1 contains ticker and 'appl' so basically, you remove levl one and make the level 0 a column 
     sns.catplot(data=df,x='Close')
     #MatPlot.show()
@@ -40,12 +42,12 @@ def graphit(dat,str,fig,ax):
     #MatPlot.show()
     return new
 #option()
-new = graphit(dat,str,fig,ax)
+new = graphit(dat,strs,fig,ax)
 dap = take('MSFT')
 nip = np.array(dap['Close'])
 ax.scatter(new,nip,c = 'red',marker=".",linewidths= 1.5, edgecolors = 'face', colorizer='none',plotnonfinite = False)
 #MatPlot.show()
-def calculate(data2, dat, str ):
+def calculate(data2, dat, strs ):
     graph = input("What type of data of each stock do you want to compare")
     st1 = np.array(dat[graph])
     st2 = np.array(data2[graph])
@@ -65,12 +67,24 @@ def period():
     duration = timedelta(days=int(period4))
     today = date.today()
     sub = today-duration + timedelta(days = 1)
-    print(sub)
+    final = str(sub)
+    print(final)
     candlestick(sub,period4)
 def candlestick(start, enduration):
     ab = datetime.combine(start, time())
     ba =  ab.timestamp()
-    MatPlot.bar(ba,10,0.8, 'center')
+    print(enduration)
+    dates = start
+    add = []
+    fig,ax = MatPlot.subplots() # it holds to this one instead of making a new plot each time
+    while str(dates) != str(start+timedelta(days= int(enduration))):
+        print(str(dates))
+        MatPlot.bar(str(dates),0.5,0.2,'center')
+        dates = (dates+ timedelta(days=1))
+    ax.plot(0,2,'d',)
+    MatPlot.tick_params
+    MatPlot.bar_label(a,label_type='center')
     MatPlot.show()
+
     return "hello"
 period()
