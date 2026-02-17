@@ -7,7 +7,26 @@ import pandas as pd
 import seaborn as sns
 import datetime 
 from datetime import timedelta, date, datetime,time
+class DuplicateTickerError(Exception):
+    pass
+class TickerNotFoundError(Exception):
+    pass
+
+watchlist =  {}
+def addTicker(name):
+    if name in watchlist:
+        raise DuplicateTickerError # raise stops the execution and makes the person handle it. 
+    watchlist[name] = {'Ticker':name,  'date-added': date.today()}
+def removeTicker(name):
+    if name not in watchlist:
+        raise TickerNotFoundError
+    return watchlist.pop(name)
+def viewWatchist(): #easier to loop through 
+    return list(watchlist.values())
+
+    
 strs = input("Please tell which stocks' data you want ")
+
 dat = take(strs)
 fig,ax = MatPlot.subplots()
 def option():
