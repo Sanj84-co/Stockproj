@@ -1,5 +1,6 @@
 
 from src.fetch.scrape import take
+import mplfinance as mpf
 import matplotlib.pyplot as MatPlot
 import matplotlib.dates as md
 import numpy as np
@@ -73,34 +74,36 @@ def calculate(data2, dat, strs ):
     ax.grid(True)
     fig.tight_layout()
     MatPlot.show()
-def period():
+def period(df,strs):
     period4 = input("to what specific amount of days do you want your data to be reflected on:")
     duration = timedelta(days=int(period4))
     today = date.today()
-    sub = today-duration + timedelta(days = 1)
+    sub = pd.Timestamp(today-duration + timedelta(days = 1)) 
+    df[df.index>sub] 
+    print(df)
     final = str(sub)
     print(final)
-    candlestick(sub,period4)
-def candlestick(start, enduration):
+    candlestick(sub,period4,df,strs)
+def candlestick(start, enduration,df,strs):
+    print(df['Date'])
     ab = datetime.combine(start, time())
     ba =  ab.timestamp()
-    print(enduration)
-    dates = start
-    add = []
-    fig,ax = MatPlot.subplots() # it holds to this one instead of making a new plot each time
+    mpf.plot(df, type='candle', volume = False, title= strs +" " +enduration, ylabel = 'OHLC candles', xlabel ='Date' )
+    print(enduration) # it holds to this one instead of making a new plot each time
     while str(dates) != str(start+timedelta(days= int(enduration))):
         print(str(dates))
         MatPlot.bar(str(dates),0.5,0.2,'center')
         dates = (dates+ timedelta(days=1))
     ax.plot(0,2,'d',)
-    MatPlot.tick_params
-    MatPlot.bar_label(ba,label_type='center')#
     MatPlot.show()
 
     return "hello"
 if __name__ == "__main__": #all of this will run if imported but it should only be triggered when the user executes the file.
     strs = input("Please tell which stocks' data you want ")
     dat = take(strs)
+    df = pd.DataFrame(dat)
+    df =df.xs(strs ,level='Ticker',axis=1)
+    period(df,strs)
     fig,ax = MatPlot.subplots()
     new = graphit(dat,strs,fig,ax)
     op = input("Do you want to perform an operation on two datasets(T/F): ") # i want to take in input as operation and then perform this operation on two data sets . for example,you can compare microsoft and AAPL based off their data through a scatterplot.
