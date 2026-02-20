@@ -75,17 +75,17 @@ def calculate(data2, dat, strs ):
     fig.tight_layout()
     MatPlot.show()
 def period(df,strs):
+    print(df)
     period4 = input("to what specific amount of days do you want your data to be reflected on:")
     duration = timedelta(days=int(period4))
     today = date.today()
     sub = pd.Timestamp(today-duration + timedelta(days = 1)) 
-    df[df.index>sub] 
+    df = df[df.index>=sub]
+    df =df.xs(strs ,level='Ticker',axis=1)
     print(df)
     final = str(sub)
-    print(final)
     candlestick(sub,period4,df,strs)
 def candlestick(start, enduration,df,strs):
-    print(df['Date'])
     ab = datetime.combine(start, time())
     ba =  ab.timestamp()
     mpf.plot(df, type='candle', volume = False, title= strs +" " +enduration, ylabel = 'OHLC candles', xlabel ='Date' )
@@ -96,15 +96,15 @@ def candlestick(start, enduration,df,strs):
         dates = (dates+ timedelta(days=1))
     ax.plot(0,2,'d',)
     MatPlot.show()
-
     return "hello"
 if __name__ == "__main__": #all of this will run if imported but it should only be triggered when the user executes the file.
     strs = input("Please tell which stocks' data you want ")
     dat = take(strs)
     df = pd.DataFrame(dat)
-    df =df.xs(strs ,level='Ticker',axis=1)
+    print(df)
     period(df,strs)
     fig,ax = MatPlot.subplots()
+    #df =df.xs(strs ,level='Ticker',axis=1)
     new = graphit(dat,strs,fig,ax)
     op = input("Do you want to perform an operation on two datasets(T/F): ") # i want to take in input as operation and then perform this operation on two data sets . for example,you can compare microsoft and AAPL based off their data through a scatterplot.
     if op == "T":
