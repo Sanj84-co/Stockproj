@@ -75,12 +75,13 @@ def calculate(data2, dat, strs ):
     fig.tight_layout()
     MatPlot.show()
 def period(df,strs):
-    print(df)
     period4 = input("to what specific amount of days do you want your data to be reflected on:")
     duration = timedelta(days=int(period4))
     today = date.today()
-    sub = pd.Timestamp(today-duration + timedelta(days = 1)) 
+    sub = pd.Timestamp(today)+pd.offsets.BusinessDay(n=int(-1 * int(period4))) 
+    print(sub)
     df = df[df.index>=sub]
+    print(df.index)
     df =df.xs(strs ,level='Ticker',axis=1)
     print(df)
     final = str(sub)
@@ -88,7 +89,9 @@ def period(df,strs):
 def candlestick(start, enduration,df,strs):
     ab = datetime.combine(start, time())
     ba =  ab.timestamp()
-    mpf.plot(df, type='candle', volume = False, title= strs +" " +enduration, ylabel = 'OHLC candles', xlabel ='Date' )
+    fig, axlist = mpf.plot(df, type='candle', volume = False, title= strs +" " +enduration, ylabel = 'OHLC candles', xlabel ='Date',returnfig = True )
+    axlist[1].xaxis.set_ticks(df.index)
+    mpf.show()
     print(enduration) # it holds to this one instead of making a new plot each time
     while str(dates) != str(start+timedelta(days= int(enduration))):
         print(str(dates))
@@ -101,7 +104,6 @@ if __name__ == "__main__": #all of this will run if imported but it should only 
     strs = input("Please tell which stocks' data you want ")
     dat = take(strs)
     df = pd.DataFrame(dat)
-    print(df)
     period(df,strs)
     fig,ax = MatPlot.subplots()
     #df =df.xs(strs ,level='Ticker',axis=1)
@@ -113,4 +115,5 @@ if __name__ == "__main__": #all of this will run if imported but it should only 
         data2 = take(stoc)
         calculate(data2,dat,op)
         period()
-
+# things I want to do:
+#  account for non trading days.
