@@ -1,5 +1,6 @@
 
 from src.fetch.scrape import take
+from matplotlib import ticker
 import mplfinance as mpf
 import matplotlib.pyplot as MatPlot
 import matplotlib.dates as md
@@ -79,18 +80,19 @@ def period(df,strs):
     duration = timedelta(days=int(period4))
     today = date.today()
     sub = pd.Timestamp(today)+pd.offsets.BusinessDay(n=int(-1 * int(period4))) 
-    print(sub)
+    new = sub.date()
     df = df[df.index>=sub]
-    print(df.index)
+    print(df.index[0])
     df =df.xs(strs ,level='Ticker',axis=1)
     print(df)
-    final = str(sub)
     candlestick(sub,period4,df,strs)
 def candlestick(start, enduration,df,strs):
+    print((list(range(len(df)))))
     ab = datetime.combine(start, time())
     ba =  ab.timestamp()
     fig, axlist = mpf.plot(df, type='candle', volume = False, title= strs +" " +enduration, ylabel = 'OHLC candles', xlabel ='Date',returnfig = True )
-    axlist[1].xaxis.set_ticks(df.index)
+    xticks = ticker.MaxNLocator(len(df)+1)
+    axlist[1].set_xticks(list(range(len(df))))
     mpf.show()
     print(enduration) # it holds to this one instead of making a new plot each time
     while str(dates) != str(start+timedelta(days= int(enduration))):
