@@ -8,3 +8,5 @@ class TooLongTickerError(Exception):
     pass
 class InavlidTickerFormatError(Exception):
     pass
+class InvalidPeriodError(Exception):
+    pass

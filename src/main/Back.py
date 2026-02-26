@@ -76,9 +76,17 @@ def calculate(data2, dat, strs ):
     fig.tight_layout()
     MatPlot.show()
 def period(df,strs):
-    period4 = input("to what specific amount of days do you want your data to be reflected on:")
-
-    duration = timedelta(days=int(period4))
+    while True:
+        period4 = input("to what specific amount of days do you want your data to be reflected on:")
+        try:
+            num = int(period4)
+            if num <=0 or num> 5200:
+                print("Please enter a positive nonzero integer within range: ")
+                continue
+            break
+        except ValueError : 
+            print("Please enter an integer")   # tells the program to ingnore what caused the error and to just raise this.
+    #None is just the NoneType object and it is nothing. this is what Null is in Python
     today = date.today()
     sub = pd.Timestamp(today)+pd.offsets.BusinessDay(n=int(-1 * (int(period4)-1))) 
     print(sub)
