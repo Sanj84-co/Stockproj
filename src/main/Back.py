@@ -77,30 +77,26 @@ def calculate(data2, dat, strs ):
     MatPlot.show()
 def period(df,strs):
     period4 = input("to what specific amount of days do you want your data to be reflected on:")
+
     duration = timedelta(days=int(period4))
     today = date.today()
-    sub = pd.Timestamp(today)+pd.offsets.BusinessDay(n=int(-1 * int(period4))) 
-    new = sub.date()
+    sub = pd.Timestamp(today)+pd.offsets.BusinessDay(n=int(-1 * (int(period4)-1))) 
+    print(sub)
     df = df[df.index>=sub]
-    print(df.index[0])
+    print(df.index[0].date())
     df =df.xs(strs ,level='Ticker',axis=1)
-    print(df)
     candlestick(sub,period4,df,strs)
 def candlestick(start, enduration,df,strs):
     print((list(range(len(df)))))
+    def formatter(x,pos):
+        return df.index[x].date()
     ab = datetime.combine(start, time())
     ba =  ab.timestamp()
-    fig, axlist = mpf.plot(df, type='candle', volume = False, title= strs +" " +enduration, ylabel = 'OHLC candles', xlabel ='Date',returnfig = True )
-    xticks = ticker.MaxNLocator(len(df)+1)
-    axlist[1].set_xticks(list(range(len(df))))
-    mpf.show()
-    print(enduration) # it holds to this one instead of making a new plot each time
-    while str(dates) != str(start+timedelta(days= int(enduration))):
-        print(str(dates))
-        MatPlot.bar(str(dates),0.5,0.2,'center')
-        dates = (dates+ timedelta(days=1))
-    ax.plot(0,2,'d',)
-    MatPlot.show()
+    fig, axlist = mpf.plot(df, type='candle', volume = True, title= strs +" " +enduration, ylabel = 'OHLC candles', xlabel ='Date',returnfig = True )
+    xticks = ticker.FuncFormatter(formatter)
+    axlist[1].set_xticks(list(range(len(df)))) # controls wehere the ticks are which is in the middle of the candle
+    axlist[1].xaxis.set_major_formatter(xticks) # controls what the actual name which i set through the formatter function.
+    mpf.show() # it holds to this one instead of making a new plot each time
     return "hello"
 if __name__ == "__main__": #all of this will run if imported but it should only be triggered when the user executes the file.
     strs = input("Please tell which stocks' data you want ")
