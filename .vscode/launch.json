@@ -8,7 +8,8 @@
             "name": "Python Debugger: Current File",
             "type": "debugpy",
             "request": "launch",
-            "module":"src.main.Back",
+            "program": "${file}",
+            "env":{"PYTHONPATH": "${workspaceFolder}"},
             "console": "integratedTerminal",
             "cwd":"${workspaceFolder}"
         }
