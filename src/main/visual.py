@@ -11,6 +11,7 @@ import datetime
 from datetime import timedelta, date, datetime,time
 from src.main.Exceptions import *
 from Back import *
+import json
 from watchlist import *
 
 
@@ -45,39 +46,36 @@ def graphit(dat,strs,fig,ax):
     return new
 if __name__ == "__main__": #all of this will run if imported but it should only be triggered when the user executes the file.
     while True:
-        input("Hello user!!Welcome to SeeStock")
-        input("You can keep track and study your stocks here")
-        checkTicker()
+        print("Hello user!!Welcome to SeeStock")
+        print("You can keep track and study your stocks here")
+        a = input("What do you want to do,  add/remove/view/nothing: ")
+        tick = input("What ticker do you want: ")
+        checkTicker(tick)
         try:
-            a = input("What do you want to do,  add/remove/view/nothing: ")
-            tick = input("What ticker do you want: ")
             if a == 'add':
-                addTicker()
+                addTicker(tick)
             elif a == 'remove':
-                removeTicker()
+                removeTicker(tick)
             else:
                 viewWatchist()
-        except:
-            input("Fix the error")
+        except ValueError as e :
+            print(e)
         d = input("What stock do you want to see data for or do you want to view the watchlist first ? ")
         if d == "view":
-            viewWatchist()
-    
-
-
-        
-    dat = take(strs)
-    df = pd.DataFrame(dat)
-    period(df,strs)
-    fig,ax = MatPlot.subplots()
-    #df =df.xs(strs ,level='Ticker',axis=1)
-    new = graphit(dat,strs,fig,ax)
-    op = input("Do you want to perform an operation on two datasets(T/F): ") # i want to take in input as operation and then perform this operation on two data sets . for example,you can compare microsoft and AAPL based off their data through a scatterplot.
-    if op == "T":
-        operation = input("what type: ")
-        stoc = input("what stock")
-        data2 = take(stoc)
-        calculate(data2,dat,op)
-        period()
+            viewWatchist() 
+        else:    
+            dat = take(tick)
+            df = pd.DataFrame(dat)
+            period(df,tick)
+            fig,ax = MatPlot.subplots()
+            #df =df.xs(strs ,level='Ticker',axis=1)
+            new = graphit(dat,tick,fig,ax)
+            op = input("Do you want to perform an operation on two datasets(T/F): ") # i want to take in input as operation and then perform this operation on two data sets . for example,you can compare microsoft and AAPL based off their data through a scatterplot.
+            if op == "T":
+                operation = input("what type: ")
+                stoc = input("what stock")
+                data2 = take(stoc)
+                calculate(data2,dat,op)
+                period()
 # things I want to do:
 #  account for non trading days.
