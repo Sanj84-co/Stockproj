@@ -43,7 +43,11 @@ def period(df,strs):
     df = df[df.index>=sub]
     print(df.index[0].date())
     df =df.xs(strs ,level='Ticker',axis=1)
+    print(df['Close'])
+    contain = [sub,period4,df,strs]
+    return contain
     candlestick(sub,period4,df,strs)
+
 def candlestick(start, enduration,df,strs):
     print((list(range(len(df)))))
     def formatter(x,pos):

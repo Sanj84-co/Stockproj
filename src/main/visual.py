@@ -21,29 +21,23 @@ def option():
     " 2. Want to compare Stock data between two stocks\n" 
     " 3. Choose and analyze any of technical indicators below\n" 
     " Moving Value Average, Ichimoku Cloud , Relative Strength Index, Volume Weighted Average Price")
-def graphit(dat,strs,fig,ax):
-    graph = input("What type of data on your ticker do you want for to be plotted:")
-    graph2 = input("What type of data on your ticker do you want for to be plotted:")
-    new = np.diff(dat[graph])
-    new2 = np.diff(np.array(dat[graph2])) # just a litle more efficient than typing new two different times.
-    df = pd.DataFrame(dat)
-    df =df.xs(strs ,level='Ticker',axis=1)
-
-    print(df.columns) #So df has one row which dalled date and two columns which have levels in each, price which is level 0 and contaisn [close, open, ...etc...] whereas level1 contains ticker and 'appl' so basically, you remove levl one and make the level 0 a column 
-    sns.catplot(data=df,x='Close')
-    #MatPlot.show()
-    #fig,ax = MatPlot.subplots()
-    df2 =  abs(df['Open']-df['Close']) #try to convert the dates into time. first retreive the dates by themselves
-    MatPlot.bar(df['Close'],height=df2,width=0.8,align='center')
-    #MatPlot.show()
-    ax.scatter(new,new2,c = "#1f77b4",marker=".",linewidths= 1.5, edgecolors = 'face', colorizer='none',plotnonfinite = False)
-    ax.grid(True)
-    ax.set_xlabel(graph)
+def comparison(data1,data2): # retreive the close data, find the starting period close for each stock then apply the formula to the entire column, then plot the data on the same graph. 
+    Closed1 = data1[2]['Close']
+    Closed2 = data2[2]['Close']
+    start1,start2= data1[0],data2[0]
+    percentClose = ((Closed1-Closed1.iloc[0])/Closed1.iloc[0]) * 100 
+    percentClose2 = ((Closed2-Closed2.iloc[0])/Closed2.iloc[0]) *100
+    fig, ax = MatPlot.subplots()
+    ax.plot(percentClose,label = data1[3])
+    ax.plot(percentClose2,label = data2[3])
+    if int(data1[1]) > 20 and int(data2[1])>20:
+        a= md.MonthLocator()
+        ax.set_major_locator(a)
+    MatPlot.xticks(rotation = 20)
     ax.legend()
-    ax.set_ylabel(graph2)
-    fig.tight_layout()
-    #MatPlot.show()
-    return new
+    print(percentClose)
+
+    print("hello")
 if __name__ == "__main__": #all of this will run if imported but it should only be triggered when the user executes the file.
     while True:
         print("Hello user!!Welcome to SeeStock")
@@ -60,22 +54,27 @@ if __name__ == "__main__": #all of this will run if imported but it should only 
                 viewWatchist()
         except ValueError as e :
             print(e)
-        d = input("What stock do you want to see data for or do you want to view the watchlist first ? ")
+        d = input("do you want to see data or do you want to view the watchlist first ? ")
         if d == "view":
             viewWatchist() 
-        else:    
-            dat = take(tick)
-            df = pd.DataFrame(dat)
-            period(df,tick)
-            fig,ax = MatPlot.subplots()
+        else:   
+            #fig,ax = MatPlot.subplots()
             #df =df.xs(strs ,level='Ticker',axis=1)
-            new = graphit(dat,tick,fig,ax)
-            op = input("Do you want to perform an operation on two datasets(T/F): ") # i want to take in input as operation and then perform this operation on two data sets . for example,you can compare microsoft and AAPL based off their data through a scatterplot.
-            if op == "T":
-                operation = input("what type: ")
-                stoc = input("what stock")
-                data2 = take(stoc)
-                calculate(data2,dat,op)
-                period()
+            further = input("Do you want to see OHLC data for one stock or compare two? ") 
+            if further == 'one':
+                stock = input("What stock? ")
+                dat = take(stock)
+                df = pd.DataFrame(dat)
+                tainer = period(df,stock)
+                candlestick(tainer[0],tainer[1],tainer[2],tainer[3])
+            else: # i want to take in input as operation and then perform this operation on two data sets . for example,you can compare microsoft and AAPL based off their data through a scatterplot.
+                stock1 = input("What is the first stock? ")
+                stock2 = input("What is the second stock? ")
+                data1 = take(stock1)
+                data2 = take(stock2)
+                adata1 = period(data1,stock1)
+                adata2 = period(data2,stock2)
+                comparison(adata1,adata2,)
+                
 # things I want to do:
 #  account for non trading days.
