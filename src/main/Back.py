@@ -25,9 +25,9 @@ def calculate(data2, dat, strs ):
     ax.grid(True)
     fig.tight_layout()
     MatPlot.show()
-def period(df,strs):
+def period(df,strs,indicator = "no"):
     while True:
-        period4 = input("to what specific amount of days do you want your data to be reflected on:")
+        period4 = input("to what specific amount of calendar  days do you want your data to span over? ")
         try:
             num = int(period4)
             if num <=0 or num> 5200:
@@ -44,6 +44,7 @@ def period(df,strs):
     print(df.index[0].date())
     df =df.xs(strs ,level='Ticker',axis=1)
     print(df['Close'])
+
     contain = [sub,period4,df,strs]
     return contain
     candlestick(sub,period4,df,strs)

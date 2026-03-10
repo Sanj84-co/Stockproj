@@ -32,8 +32,13 @@ def comparison(data1,data2): # retreive the close data, find the starting period
     ax.plot(percentClose2,label = data2[3])
     if int(data1[1]) > 20 and int(data2[1])>20:
         a= md.MonthLocator()
-        ax.set_major_locator(a)
-    MatPlot.xticks(rotation = 20)
+        b = md.WeekdayLocator()
+        ax.xaxis.set_major_locator(a)
+        ax.xaxis.set_minor_locator(b)
+        ax.set_ylabel(ylabel = '%')
+        ax.tick_params(which='minor', color ='red', bottom = True, length = 10 )
+    else:
+        MatPlot.xticks(rotation = 20)
     ax.legend()
     print(percentClose)
 
@@ -65,14 +70,18 @@ if __name__ == "__main__": #all of this will run if imported but it should only 
                 stock = input("What stock? ")
                 dat = take(stock)
                 df = pd.DataFrame(dat)
-                tainer = period(df,stock)
+                indicator = input("Do you want to see the indicator for the stock(yes or no)? ")
+                if indicator == 'yes':
+                    tainer = period(df,stock,indicator)
+                else:
+                    tainer = period(df,stock)
                 candlestick(tainer[0],tainer[1],tainer[2],tainer[3])
             else: # i want to take in input as operation and then perform this operation on two data sets . for example,you can compare microsoft and AAPL based off their data through a scatterplot.
                 stock1 = input("What is the first stock? ")
                 stock2 = input("What is the second stock? ")
                 data1 = take(stock1)
                 data2 = take(stock2)
-                adata1 = period(data1,stock1)
+                adata1 = period(data1,stock1,)
                 adata2 = period(data2,stock2)
                 comparison(adata1,adata2,)
                 
