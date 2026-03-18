@@ -13,8 +13,7 @@ from src.main.Exceptions import *
 from Back import *
 import json
 from watchlist import *
-
-
+from indicatorStock import *
 def option():
     str =  input("These are the options that you have\n"         
     " 1. Want to calculate stock data\n" 
@@ -25,8 +24,8 @@ def comparison(data1,data2): # retreive the close data, find the starting period
     Closed1 = data1[2]['Close']
     Closed2 = data2[2]['Close']
     start1,start2= data1[0],data2[0]
-    percentClose = ((Closed1-Closed1.iloc[0])/Closed1.iloc[0]) * 100 
-    percentClose2 = ((Closed2-Closed2.iloc[0])/Closed2.iloc[0]) *100
+    percentClose = ((Closed1-Closed1.iloc[0])/Closed1.iloc[0])* 100 
+    percentClose2 = ((Closed2-Closed2.iloc[0])/Closed2.iloc[0])*100
     fig, ax = MatPlot.subplots()
     ax.plot(percentClose,label = data1[3])
     ax.plot(percentClose2,label = data2[3])
@@ -68,22 +67,27 @@ if __name__ == "__main__": #all of this will run if imported but it should only 
             further = input("Do you want to see OHLC data for one stock or compare two? ") 
             if further == 'one':
                 stock = input("What stock? ")
-                dat = take(stock)
-                df = pd.DataFrame(dat)
                 indicator = input("Do you want to see the indicator for the stock(yes or no)? ")
                 if indicator == 'yes':
-                    tainer = period(df,stock,indicator)
+                  while True:
+                    try:
+                        tainer = period(stock,indicator)
+                        if len(tainer[2]['Close'])>=28:
+                            obj = stockalgo(tainer[2]['Close'])
+                            obj.Rsi()
+                            candlestick(tainer[0],tainer[1],tainer[2],tainer[3],Rsi=obj.rsi)
+                            break 
+                        continue
+                    except e as ValueError:
+                        print('The amount of periods or trading days has to be 14+')
                 else:
-                    tainer = period(df,stock)
-                candlestick(tainer[0],tainer[1],tainer[2],tainer[3])
+                    tainer = period(stock)
+                    candlestick(tainer[0],tainer[1],tainer[2],tainer[3])
             else: # i want to take in input as operation and then perform this operation on two data sets . for example,you can compare microsoft and AAPL based off their data through a scatterplot.
-                stock1 = input("What is the first stock? ")
-                stock2 = input("What is the second stock? ")
-                data1 = take(stock1)
-                data2 = take(stock2)
-                adata1 = period(data1,stock1,)
-                adata2 = period(data2,stock2)
-                comparison(adata1,adata2,)
-                
+                stock1 = input("What is the first stock?")
+                stock2 = input("What is the second stock?")
+                adata1 = period(stock1)
+                adata2 = period(stock2)
+                comparison(adata1,adata2)
 # things I want to do:
 #  account for non trading days.
