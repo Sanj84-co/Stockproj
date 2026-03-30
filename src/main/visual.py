@@ -14,6 +14,7 @@ from Back import *
 import json
 from watchlist import *
 from indicatorStock import *
+from storage import * 
 def option():
     str =  input("These are the options that you have\n"         
     " 1. Want to calculate stock data\n" 
@@ -43,6 +44,11 @@ def comparison(data1,data2): # retreive the close data, find the starting period
 
     print("hello")
 if __name__ == "__main__": #all of this will run if imported but it should only be triggered when the user executes the file.
+    name = input("What is your name user? ")
+    user_id = get_id(name)
+    if user_id == None:
+         create_user(name,date.today())
+         user_id = get_id(name) #if name is not in database. you create the new user and then retreive the user_id.
     while True:
         print("Hello user!!Welcome to SeeStock")
         print("You can keep track and study your stocks here")
@@ -51,16 +57,19 @@ if __name__ == "__main__": #all of this will run if imported but it should only 
         checkTicker(tick)
         try:
             if a == 'add':
-                addTicker(tick)
+                add(user_id,tick,date.today())
             elif a == 'remove':
-                removeTicker(tick)
+                remove(tick,user_id)
             else:
-                viewWatchist()
+                get_user(user_id)
         except ValueError as e :
             print(e)
         d = input("do you want to see data or do you want to view the watchlist first ? ")
         if d == "view":
-            viewWatchist() 
+            watch = get_user(user_id)
+            for i in watch:
+                print('Stock: ' + i[2])
+                print('Time_Added: ' + i[3])
         else:   
             #fig,ax = MatPlot.subplots()
             #df =df.xs(strs ,level='Ticker',axis=1)
