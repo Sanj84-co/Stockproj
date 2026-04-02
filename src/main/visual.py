@@ -48,7 +48,16 @@ if __name__ == "__main__": #all of this will run if imported but it should only 
     user_id = get_id(name)
     if user_id == None:
          create_user(name,date.today())
-         user_id = get_id(name) #if name is not in database. you create the new user and then retreive the user_id.
+         user_id = get_id(name)
+    a=(view_transactions(user_id))
+    for item in a:
+        print('Ticker: ' + item[2])
+        print('Shares: ' + str(item[3]))
+        print('Bought Price: ' + str(item[4]))
+        print('Bought on: ' + str(item[5])) 
+        p = pnL(item)
+        print('Current Price: ' + str(p[1]))
+        print('PnL: ' + str(round(p[0],2))) #if name is not in database. you create the new user and then retreive the user_id.
     while True:
         print("Hello user!!Welcome to SeeStock")
         print("You can keep track and study your stocks here")
@@ -57,6 +66,10 @@ if __name__ == "__main__": #all of this will run if imported but it should only 
         checkTicker(tick)
         try:
             if a == 'add':
+                ask = input("Do you want to add a transaction or not")
+                if ask == 'yes':
+                    add_transactions(user_id,tick,3)
+                    print(view_transactions(user_id))
                 add(user_id,tick,date.today())
             elif a == 'remove':
                 remove(tick,user_id)

@@ -12,3 +12,7 @@ def clean(dat):
     df1 = df1.fillna(0)
     df1 = df1.drop_duplicates() 
     return df1 ##duplicates, null values, 
+def currentP(ticker):
+    ticker = yf.Ticker(ticker)
+    cprice = ticker.info.get('currentPrice')
+    return cprice

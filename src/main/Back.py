@@ -10,7 +10,7 @@ import seaborn as sns
 import datetime 
 from datetime import timedelta, date, datetime,time
 from src.main.Exceptions import *
-
+from src.fetch.scrape import * 
 #option()
 #dap = take('MSFT')
 #nip = np.array(dap['Close'])
@@ -69,6 +69,16 @@ def candlestick(start, enduration,df,strs,Rsi = None):
         mpf.show()
         print(mpf.available_styles())      # it holds to this one instead of making a new plot each time
     return "hello"
+def pnL(item):
+    ticker = item[2]
+    shares = item[3]
+    bought_price = item[4]
+    total_purchase = shares * bought_price
+    current_price = currentP(ticker)
+    total_sale = shares * current_price
+    total_pnl = total_sale-total_purchase
+    return [total_pnl,current_price]
+
 #it does not pay attention to the watchlist at all.
 # things I want to do:
 #  account for non trading days.
