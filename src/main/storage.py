@@ -1,6 +1,6 @@
 import sqlite3
-from Exceptions import *
-from watchlist import checkTicker
+from src.main.Exceptions import *
+from src.main.watchlist import checkTicker
 from datetime import date
 from src.fetch import scrape
 with sqlite3.connect("store.db") as con: # need to create and actually connect to the database. conec
