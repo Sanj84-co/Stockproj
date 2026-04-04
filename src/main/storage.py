@@ -9,6 +9,8 @@ with sqlite3.connect("store.db") as con: # need to create and actually connect t
     cur.execute("CREATE TABLE IF NOT EXISTS watchlist( ticker_id INTEGER PRIMARY KEY AUTOINCREMENT, " \
     "user_id INTEGER,Ticker TEXT, time_added TEXT, FOREIGN KEY(user_id)REFERENCES user(user_id))")
     cur.execute('CREATE TABLE IF NOT EXISTS transactions( transaction_id INTEGER PRIMARY KEY AUTOINCREMENT,  user_id INTEGER, ticker TEXT, Shares Number, purchase_price REAL ,created_date TIMESTAMP,FOREIGN KEY(user_id)REFERENCES users(user_id))')
+    cur.execute('CREATE TABLE IF NOT EXISTS alerts(alert_id INTEGER PRIMARY KEY AUTOINCREMENT, user_id INTEGER , Ticker TEXT,' \
+    'threshold_price REAL,status TEXT,FOREIGN KEY(user_id)REFERENCES user(user_id))')
     con.commit()
 def get_id(name):
     with sqlite3.connect('store.db') as con:
@@ -75,3 +77,4 @@ def view_transactions(user_id):
 #using f strings in injecting data into sql which is dangerous. people can inject malicious code into the input fields
 # and use that to view sensitive data. use parameterized quieres instead 
 # 1 or 1=1 always true so it returns every row. ? treats it as data not sql code
+#adding an alerts table is good because it adds persistence to the data. if the user manually adds data it will get everytime the app refreshes.
