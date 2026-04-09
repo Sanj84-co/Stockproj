@@ -10,3 +10,5 @@ class InavlidTickerFormatError(Exception):
     pass
 class InvalidPeriodError(Exception):
     pass
+class AlertDoesNotExist(Exception):
+    pass

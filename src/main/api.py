@@ -1,9 +1,11 @@
 from fastapi import FastAPI #from staapi import the class FAST API
 from src.main.storage import *
 from pydantic import BaseModel
-from src.main.Back import *
+from src.main.Back import * 
+from contextlib import asynccontextmanager
 class Delivery(BaseModel):
     name: str
+    email:str
     
      #define the schema of the network that you are working on.
 class added(BaseModel):
@@ -13,19 +15,39 @@ class transaction(BaseModel):
     name:str
     Ticker:str
     shares: int
-app = FastAPI() #retrives fastapi instance
+class alert(BaseModel):
+    name:str
+    Ticker:str
+    threshold:float
+@asynccontextmanager
+async def lifespan(app:FastAPI):#app as a parameter 
+    scheduler = BackgroundScheduler() #create a background scheduler instance
+    scheduler.add_job(alert_noti,'interval',seconds = 60)# add a job to call alert noti function every 60 seconds 
+    scheduler.start()#start the instance so when the server runs
+    yield #when the server is actually taking requests
+    scheduler.shutdown()
+
+app = FastAPI(lifespan=lifespan) #retrives fastapi instance
 @app.get('/')#decorator which tells it that when this path is provided activate this function
 async def root(): # it will run this function when the specific path is described.# async means it can handle multiple requests at once.
     return {'message':'Stock App'}
 @app.post('/users') #path params are for search, query params are for filtering. dont use path mostly post since the information is sent alongside the request body.
 async def create(deliver:Delivery): 
-    create_user(deliver.name,str(date.today()))# it is intialized in a schema instead.
+    create_user(deliver.name,deliver.email,str(date.today()))# it is intialized in a schema instead.
     user_id = get_id(deliver.name)
     return {'name':deliver.name, 'user_id':user_id}#json is a language-independent text format used to display data.
 @app.get('/users/{name}')
 async def getuser_id(name:str):
     a = get_id(name)
     return {'name':name,'user_id':a}
+@app.get('/user/{name}')
+async def user_profile(name:str):
+    a = get_id(name)
+    r = retrieve_profile(a)
+    return{
+        'name':name,
+        'email':r[len(r)-1]
+    }
 @app.get('/watchlist/{name}')
 async def getwatchlist(name:str):
     a = get_id(name)
@@ -86,4 +108,37 @@ async def new_transaction(transaction:transaction):
             'Ticker':transaction.Ticker,
             'Shares':transaction.shares
         }
+    }
+@app.get('/alerts/{Name}')
+async def get_alerts(Name:str):
+    a = get_id(Name)
+    lis =  view_alerts(a)
+    conda = []
+    for item in lis:
+        p = {
+            'name':Name,
+            'Ticker':item[2],
+            'Threshold':item[3],
+            "Status":item[4]
+        }
+        conda.append(p)
+    return{
+        'alerts': conda
+    }
+@app.post('/alerts')
+async def add_al(alert:alert):
+    a = get_id(alert.name)
+    add_alerts(a,alert.Ticker,alert.threshold)
+    return{
+        'name':alert.name,
+        'Ticker':alert.Ticker,
+        'Threshold':alert.threshold
+    }
+@app.delete('/alerts/{name}/{Ticker}')
+async def remove_a(name:str,Ticker:str):
+    a = get_id(name)
+    remove_alerts(Ticker,a)
+    return{
+        'name':name,
+        'Ticker':Ticker
     }

@@ -3,14 +3,22 @@ from src.fetch.scrape import take
 from matplotlib import ticker
 import mplfinance as mpf
 import matplotlib.pyplot as MatPlot
-import matplotlib.dates as md
 import numpy as np
 import pandas as pd 
-import seaborn as sns
 import datetime 
-from datetime import timedelta, date, datetime,time
+from datetime import date, datetime,time
 from src.main.Exceptions import *
 from src.fetch.scrape import * 
+import apscheduler as ap
+from apscheduler.schedulers.background import BackgroundScheduler
+import smtplib as sm
+from smtplib import SMTP
+from src.main.storage import view_allalerts,get_user,change_status,retrieve_profile # i am running the project from the root so this is what you need to do 
+import os
+from dotenv import load_dotenv
+load_dotenv()
+sender_email = os.getenv('EMAIL_ID')
+sender_password = os.getenv('EMAIL_PASSWORD')# use the enviroment to store sensitive information and put it within a .gitignore to avoid github having it.
 #option()
 #dap = take('MSFT')
 #nip = np.array(dap['Close'])
@@ -78,7 +86,23 @@ def pnL(item):
     total_sale = shares * current_price
     total_pnl = total_sale-total_purchase
     return [total_pnl,current_price]
-
+def alert_noti():#someone would need to call if if it hss a parameter niut we dont want that since thid s backhrounfd job that happens every minute =.
+    lis = view_allalerts()
+    for item in lis:
+        thres = item[3]
+        ticker = item[2]
+        user_id = item[1]
+        a = retrieve_profile(user_id)
+        email = a[len(a)-1]
+        if currentP(ticker) > thres:
+            #send the scheduled email
+            s = sm.SMTP('smtp.gmail.com',587)#Ttrnsaport layer secuirty. more secure version of ssl.
+            s.starttls()
+            message = 'Your threshold price has been passed.'
+            s.login(user=sender_email,password=sender_password)
+            s.sendmail(sender_email,email,message)
+            change_status(user_id,ticker)
+            s.quit()
 #it does not pay attention to the watchlist at all.
 # things I want to do:
 #  account for non trading days.

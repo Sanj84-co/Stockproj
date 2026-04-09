@@ -50,6 +50,7 @@ if __name__ == "__main__": #all of this will run if imported but it should only 
          create_user(name,date.today())
          user_id = get_id(name)
     a=(view_transactions(user_id))
+    b = alert_noti()
     for item in a:
         print('Ticker: ' + item[2])
         print('Shares: ' + str(item[3]))
