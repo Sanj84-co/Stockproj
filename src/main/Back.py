@@ -24,6 +24,7 @@ sender_password = os.getenv('EMAIL_PASSWORD')# use the enviroment to store sensi
 #nip = np.array(dap['Close'])
 #ax.scatter(new,nip,c = 'red',marker=".",linewidths= 1.5, edgecolors = 'face', colorizer='none',plotnonfinite = False)
 #MatPlot.show()
+cache = {}
 def calculate(data2, dat, strs ):
     graph = input("What type of data of each stock do you want to compare")
     st1 = np.array(dat[graph])
@@ -94,7 +95,7 @@ def alert_noti():#someone would need to call if if it hss a parameter niut we do
         user_id = item[1]
         a = retrieve_profile(user_id)
         email = a[len(a)-1]
-        if currentP(ticker) > thres:
+        if cached_checker(ticker) > thres:
             #send the scheduled email
             s = sm.SMTP('smtp.gmail.com',587)#Ttrnsaport layer secuirty. more secure version of ssl.
             s.starttls()
@@ -106,3 +107,7 @@ def alert_noti():#someone would need to call if if it hss a parameter niut we do
 #it does not pay attention to the watchlist at all.
 # things I want to do:
 #  account for non trading days.
+def cached_checker(ticker):
+    if ticker not in cache or (datetime.now()-cache[ticker]['timestamp']).total_seconds()>30:
+        cache[ticker] = {'price':currentP(ticker),'timestamp':datetime.now()}
+    return cache[ticker]['price']
