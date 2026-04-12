@@ -16,6 +16,8 @@ from smtplib import SMTP
 from src.main.storage import view_allalerts,get_user,change_status,retrieve_profile # i am running the project from the root so this is what you need to do 
 import os
 from dotenv import load_dotenv
+import logging 
+logger = logging.getLogger(__name__) # each file has own stance of logger but all congigure to the same file 
 load_dotenv()
 sender_email = os.getenv('EMAIL_ID')
 sender_password = os.getenv('EMAIL_PASSWORD')# use the enviroment to store sensitive information and put it within a .gitignore to avoid github having it.
@@ -97,17 +99,27 @@ def alert_noti():#someone would need to call if if it hss a parameter niut we do
         email = a[len(a)-1]
         if cached_checker(ticker) > thres:
             #send the scheduled email
-            s = sm.SMTP('smtp.gmail.com',587)#Ttrnsaport layer secuirty. more secure version of ssl.
-            s.starttls()
-            message = 'Your threshold price has been passed.'
-            s.login(user=sender_email,password=sender_password)
-            s.sendmail(sender_email,email,message)
-            change_status(user_id,ticker)
-            s.quit()
+            try:
+                s = sm.SMTP('smtp.gmail.com',587)#Ttrnsaport layer secuirty. more secure version of ssl.
+                s.starttls()
+                message = 'Your threshold price has been passed.'
+                s.login(sender_email,sender_password)
+                s.sendmail(sender_email,email,message)
+                change_status(user_id,ticker)
+                s.quit()
+                logger.info(f'Email sent and status of alert changed. Ticker: {ticker},email:{email}')
+            except sm.SMTPException:# smtp is the instance
+                logger.error('Email failed to send!')
+                
 #it does not pay attention to the watchlist at all.
 # things I want to do:
 #  account for non trading days.
 def cached_checker(ticker):
     if ticker not in cache or (datetime.now()-cache[ticker]['timestamp']).total_seconds()>30:
         cache[ticker] = {'price':currentP(ticker),'timestamp':datetime.now()}
+        logger.info(f'New data is fetched. Ticker: {ticker}')
+    else:    
+        logger.debug(f'Cache hit.Ticker: {ticker}')
     return cache[ticker]['price']
+# we are going to add a logging system in here because it is important to constantly be reminded of what works and what does not when we being
+# our application so it is better to start it here.

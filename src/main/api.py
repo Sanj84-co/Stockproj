@@ -1,4 +1,4 @@
-from fastapi import FastAPI #from staapi import the class FAST API
+from fastapi import FastAPI,requests #from staapi import the class FAST API
 from src.main.storage import *
 from pydantic import BaseModel
 from src.main.Back import pnL,alert_noti
@@ -6,6 +6,10 @@ from src.fetch.scrape import currentP
 from contextlib import asynccontextmanager
 from datetime import date, datetime,time
 from apscheduler.schedulers.background import BackgroundScheduler
+import logging 
+logger = logging.getLogger(__name__)#intializes the logging instance.
+logging.basicConfig(filename='status.log',encoding='utf-8',level=logging.DEBUG)# sets up the basic config. utf-8 is the character that it can have including the type.
+logger.debug('First debugging statement')
 class Delivery(BaseModel):
     name: str
     email:str
@@ -26,8 +30,10 @@ async def lifespan(app:FastAPI):#app as a parameter
     scheduler = BackgroundScheduler() #create a background scheduler instance
     scheduler.add_job(alert_noti,'interval',seconds = 60)# add a job to call alert noti function every 60 seconds 
     scheduler.start()#start the instance so when the server runs
+    logger.info('Server starts')
     yield #when the server is actually taking requests
     scheduler.shutdown()
+    logger.info('Server shuts down')
 
 app = FastAPI(lifespan=lifespan) #retrives fastapi instance
 @app.get('/')#decorator which tells it that when this path is provided activate this function
