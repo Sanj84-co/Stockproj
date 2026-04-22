@@ -6,3 +6,4 @@ new 10/31/25
 try to retrieve period data and convert it to a value as that will be the x value.
 
 Checker
+yo
