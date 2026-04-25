@@ -3,7 +3,7 @@ from src.main.Exceptions import *
 from src.main.watchlist import checkTicker
 from datetime import date
 from src.fetch import scrape
-with sqlite3.connect("store.db") as con: # need to create and actually connect to the database. conec
+with sqlite3.connect("data/store.db") as con: # need to create and actually connect to the database. conec
     cur = con.cursor() # to make the queries this is waht you need to do.
     cur.execute("CREATE TABLE IF NOT EXISTS user(user_id INTEGER PRIMARY KEY AUTOINCREMENT, Name TEXT,time_joined TEXT)")
     cur.execute("CREATE TABLE IF NOT EXISTS watchlist( ticker_id INTEGER PRIMARY KEY AUTOINCREMENT, " \
@@ -23,27 +23,27 @@ with sqlite3.connect("store.db") as con: # need to create and actually connect t
         pass 
     con.commit()
 def get_id(name):
-    with sqlite3.connect('store.db') as con:
+    with sqlite3.connect('data/store.db') as con:
         cur = con.cursor()
         cur.execute('SELECT user_id FROM user WHERE Name = ?',(name,)) # single element tuples need a trailing comma.
         a = cur.fetchone()
         print(a[0])
         return int(a[0])
 def retrieve_profile(user_id):
-    with sqlite3.connect('store.db') as con:
+    with sqlite3.connect('data/store.db') as con:
         cur = con.cursor()
         cur.execute('SELECT * FROM user WHERE user_id = ?',(user_id,))
         a= cur.fetchone()
         return a
 def get_user(user_id):
-    with sqlite3.connect('store.db') as con:
+    with sqlite3.connect('data/store.db') as con:
         cur = con.cursor()
         cur.execute('SELECT * FROM watchlist WHERE user_id = ?',(user_id,))
         a = cur.fetchall()
         return a
 def add(user_id,Ticker,time_add):
       checkTicker(Ticker)
-      with sqlite3.connect('store.db') as con:
+      with sqlite3.connect('data/store.db') as con:
         checkTicker(Ticker)
         #checkticker function from watchlist
         cur = con.cursor()
@@ -56,7 +56,7 @@ def add(user_id,Ticker,time_add):
         con.commit()
 def remove(ticker,user_id): # permantely save the change # needs user_id or will delte every instance of a ticker
     checkTicker(ticker) # should check prior to actually starting the connection so you dont have a redundant connection
-    with sqlite3.connect('store.db') as con:
+    with sqlite3.connect('data/store.db') as con:
         cur = con.cursor()
         cur.execute('SELECT * FROM watchlist WHERE user_id = ? AND Ticker = ?',(user_id,ticker))
         ti = cur.fetchone()
@@ -66,24 +66,24 @@ def remove(ticker,user_id): # permantely save the change # needs user_id or will
             cur.execute('DELETE FROM watchlist WHERE ticker = ? AND user_id = ?',(ticker,user_id))
         con.commit()
 def create_user(Name,email,time_joined):
-    with sqlite3.connect('store.db') as con: # connection automatically closes each time
+    with sqlite3.connect('data/store.db') as con: # connection automatically closes each time
         cur = con.cursor()
         cur.execute('INSERT INTO user(Name, time_joined,email)VALUES(?,?,?)',(Name,str(time_joined),email))
         con.commit()
 def get_transaction_id(user_id,ticker):
-    with sqlite3.connect('store.db') as con:
+    with sqlite3.connect('data/store.db') as con:
         cur = con.cursor()
         cur.execute('SELECT transaction_id FROM transactions WHERE user_id = ? AND ticker = ?',(user_id,ticker))
         a = cur.fetchone()
         return a[0]
 def add_transactions(user_id,ticker,shares):
     purchase_price = scrape.currentP(ticker)
-    with sqlite3.connect('store.db') as con:
+    with sqlite3.connect('data/store.db') as con:
         cur = con.cursor()
         cur.execute('INSERT INTO transactions(user_id,ticker,Shares,purchase_price,created_date,status)VALUES(?,?,?,?,?,?)',(user_id,ticker,shares,purchase_price,date.today(),'Bought'))
         con.commit()
 def sell_transaction(user_id,transaction_id):
-    with sqlite3.connect('store.db') as con:
+    with sqlite3.connect('data/store.db') as con:
         cur = con.cursor()
         cur.execute('SELECT * FROM transactions WHERE user_id = ? AND transaction_id = ?',(user_id,transaction_id))
         a = cur.fetchall()
@@ -94,21 +94,21 @@ def sell_transaction(user_id,transaction_id):
         con.commit()
 
 def view_transactions(user_id):
-    with sqlite3.connect('store.db') as con:
+    with sqlite3.connect('data/store.db') as con:
         cur = con.cursor()
         cur.execute('SELECT * FROM transactions WHERE user_id = ?',(user_id,))
         a = cur.fetchall()
         # saves changes to the base you dont update the db during a select query 
         return a 
 def view_alerts(user_id):
-    with sqlite3.connect('store.db') as con:
+    with sqlite3.connect('data/store.db') as con:
         cur = con.cursor()
         cur.execute('SELECT * FROM alerts WHERE user_id = ?',(user_id,))
         a= cur.fetchall()
         #dont need to commit for select 
         return a
 def add_alerts(user_id, Ticker, threshold_price):
-    with sqlite3.connect('store.db') as con:
+    with sqlite3.connect('data/store.db') as con:
         cur = con.cursor()
         cur.execute('SELECT * FROM alerts WHERE user_id = ? AND ticker = ?',(user_id,Ticker))
         a = cur.fetchone()
@@ -118,7 +118,7 @@ def add_alerts(user_id, Ticker, threshold_price):
             cur.execute('INSERT INTO alerts(user_id,Ticker,threshold_price,status)VALUES(?,?,?,?)',(user_id,Ticker,threshold_price,'Activated'))
         con.commit()
 def remove_alerts(Ticker,user_id):
-    with sqlite3.connect('store.db') as con:
+    with sqlite3.connect('data/store.db') as con:
         cur = con.cursor()
         cur.execute('SELECT * FROM alerts WHERE user_id = ? AND Ticker = ?',(user_id,Ticker))
         a = cur.fetchone()
@@ -129,12 +129,12 @@ def remove_alerts(Ticker,user_id):
         con.commit()
         return a
 def change_status(user_id,Ticker):
-    with sqlite3.connect('store.db') as con:
+    with sqlite3.connect('data/store.db') as con:
         cur = con.cursor()
         cur.execute("UPDATE alerts SET status = 'passed' WHERE user_id = ? AND Ticker = ?",(user_id,Ticker))
         con.commit()# it should get called internally whenever it is activated
 def view_allalerts():
-    with sqlite3.connect('store.db') as con:
+    with sqlite3.connect('data/store.db') as con:
         cur = con.cursor()
         cur.execute("SELECT * FROM alerts WHERE status = 'Activated'")# you dont want to fetch the ones that were already passed.
         a = cur.fetchall()

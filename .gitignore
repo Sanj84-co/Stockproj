@@ -1,7 +1,8 @@
 venv/
 __pycache__/
 .env
-data/raw/
-data/processed/
+data/store.db
+status.log
+*.db
 
 
