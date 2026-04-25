@@ -1,7 +1,7 @@
 from fastapi import FastAPI,requests #from staapi import the class FAST API
 from src.main.storage import *
 from pydantic import BaseModel
-from src.main.Back import pnL,alert_noti
+from src.main.Back import pnL,alert_noti,retrieve_recommendation
 from src.fetch.scrape import currentP
 from contextlib import asynccontextmanager
 from datetime import date, datetime,time
@@ -163,6 +163,21 @@ async def remove_a(name:str,Ticker:str):
         'name':name,
         'Ticker':Ticker
     }
+@app.get('/Review/{name}/{Ticker}')
+async def get_recommendation(name:str,Ticker:str):
+    user_id = get_id(name)
+    watchlist = get_user(user_id)
+    transactions = view_transactions(user_id)
+    check_watchlist = any(row[2] == Ticker for row in watchlist) # any makes basically a one liner loop. 
+    check_transactions = any(row[2] == Ticker for row in transactions)
+    if  check_watchlist or check_transactions:
+        statement = retrieve_recommendation(Ticker)
+        return statement
+    else:
+        raise TickerNotFoundError('Ticker is not in watchlist or your transactions. RSI analysis cannot be made')
+        
+
+    
 @app.exception_handler(DuplicateTickerError)
 async def duplicate_exception_handler(req,exe):
     return JSONResponse(

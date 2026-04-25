@@ -6,7 +6,7 @@ import matplotlib.pyplot as MatPlot
 import numpy as np
 import pandas as pd 
 import datetime 
-from datetime import date, datetime,time
+from datetime import date, datetime,time,timedelta
 from src.main.Exceptions import *
 from src.fetch.scrape import * 
 import apscheduler as ap
@@ -17,6 +17,7 @@ from src.main.storage import view_allalerts,get_user,change_status,retrieve_prof
 import os
 from dotenv import load_dotenv
 import logging 
+import src.main.indicatorStock as i
 logger = logging.getLogger(__name__) # each file has own stance of logger but all congigure to the same file 
 load_dotenv()
 sender_email = os.getenv('EMAIL_ID')
@@ -124,3 +125,9 @@ def cached_checker(ticker):
     return cache[ticker]['price']
 # we are going to add a logging system in here because it is important to constantly be reminded of what works and what does not when we being
 # our application so it is better to start it here.
+def retrieve_recommendation(Ticker):
+    start = date.today()- timedelta(days = 30)
+    df = take(Ticker,start)
+    Stock = i.stockalgo(df['Close'])
+    Stock.Rsi()
+    return Stock.recommend()

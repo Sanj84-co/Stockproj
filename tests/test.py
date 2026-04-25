@@ -2,6 +2,8 @@ import pytest
 from src.main.Back import cached_checker,pnL,alert_noti
 from src.fetch.scrape import currentP
 from unittest.mock import patch 
+import pandas as pd
+import src.main.indicatorStock as i
 #intit files is so they can be treated as packgaes.. pytest runs spearately so it does not focus on the actual cahce. it runs on different meemory
 # pytest cache is diff from program cache. you need to make conftest because pytest does not stockproj is the root.
 # touch to make a new file.
@@ -32,6 +34,25 @@ def test_alerts(rp,sm,va,cc):
      assert sm.called
      #mocks should never rewrite the function
 #replaces the modules inside the function so that for the duration of the test it is replaces by the patchunction.
+@patch('src.main.indicatorStock.stockalgo.Rsi')#creaates a fake instance of the object the problem is self only exists withib 
+def test_recommend_overbought(test_RsI):
+     tester = i.stockalgo('?')
+     tester.rsi = pd.Series([0.0,0.0,71],dtype=float)
+     test_RsI.return_value = pd.Series([0.0,0.0,71],dtype=float)
+     assert 'The stock is overbought.Sell' == tester.recommend()
+@patch('src.main.indicatorStock.stockalgo.Rsi')#creaates a fake instance of the object the problem is self only exists withib 
+def test_recommend_hold(test_RsI):
+     tester = i.stockalgo('?')
+     tester.rsi = pd.Series([0.0,0.0,50],dtype=float)
+     test_RsI.return_value = pd.Series([0.0,0.0,50],dtype=float)
+     assert "It is undetermined right now.Please hold the stock." == tester.recommend()
+@patch('src.main.indicatorStock.stockalgo.Rsi')#creaates a fake instance of the object the problem is self only exists withib 
+def test_recommend_oversold(test_RsI):
+     tester = i.stockalgo('?')
+     tester.rsi = pd.Series([0.0,0.0,20],dtype=float)
+     test_RsI.return_value = pd.Series([0.0,0.0,20],dtype=float)
+     assert "The stock is oversold. Buy" == tester.recommend()
+     
 
 
 

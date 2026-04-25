@@ -23,5 +23,14 @@ class stockalgo:
         new = pd.Series(float('nan'))
         nRSI = pd.concat([new,RSI])
         self.rsi = nRSI
+    def recommend(self):
+        self.Rsi()# 
+        latest_value = self.rsi.iloc[-1]#retreives the last index of the ai layer.
+        if latest_value > 70:
+            return "The stock is overbought.Sell"
+        elif latest_value>30 and latest_value<70:
+            return "It is undetermined right now.Please hold the stock."
+        else:
+            return "The stock is oversold. Buy"
         
  
