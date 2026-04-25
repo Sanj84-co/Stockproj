@@ -85,7 +85,7 @@ def pnL(item):
     shares = item[3]
     bought_price = item[4]
     total_purchase = shares * bought_price
-    current_price = currentP(ticker)
+    current_price = cached_checker(ticker)
     total_sale = shares * current_price
     total_pnl = total_sale-total_purchase
     return [total_pnl,current_price]
@@ -108,6 +108,7 @@ def alert_noti():#someone would need to call if if it hss a parameter niut we do
                 change_status(user_id,ticker)
                 s.quit()
                 logger.info(f'Email sent and status of alert changed. Ticker: {ticker},email:{email}')
+                return "sent"
             except sm.SMTPException:# smtp is the instance
                 logger.error('Email failed to send!')
                 

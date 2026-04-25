@@ -7,6 +7,7 @@ from contextlib import asynccontextmanager
 from datetime import date, datetime,time
 from apscheduler.schedulers.background import BackgroundScheduler
 import logging 
+from fastapi.responses import JSONResponse
 logger = logging.getLogger(__name__)#intializes the logging instance.
 logging.basicConfig(filename='status.log',encoding='utf-8',level=logging.DEBUG)# sets up the basic config. utf-8 is the character that it can have including the type.
 logger.debug('First debugging statement')
@@ -100,7 +101,8 @@ async def user_transactions(name:str):
             'Bought Price': str(item[4]),
             'Bought on': str(item[5]),
             'Current Price': str(profit[1]),
-            'PnL':str(round(profit[0],2))
+            'PnL':str(round(profit[0],2)),
+            "Status": item[len(item)-1]
         }
         conta.append(p)
     return{
@@ -109,14 +111,25 @@ async def user_transactions(name:str):
 @app.post('/transactions')
 async def new_transaction(transaction:transaction):
     id = get_id(transaction.name)
-    add_transactions(id,transaction.Ticker,transaction.shares)
+    b = add_transactions(id,transaction.Ticker,transaction.shares)
     return{
         'transaction':{
             'Name':transaction.name,
             'Ticker':transaction.Ticker,
-            'Shares':transaction.shares
+            'Shares':transaction.shares,
+            "Status": b[len(b)-1]
         }
     }
+@app.delete('/transactions/{name}/{ticker}')
+async def give_transaction(name:str,ticker:str):
+    user_id = get_id(name)
+    t_id = get_transaction_id(user_id,ticker)
+    sell_transaction(user_id,t_id)
+    return{
+        "name":name,
+        "ticker":ticker,
+    }
+
 @app.get('/alerts/{Name}')
 async def get_alerts(Name:str):
     a = get_id(Name)
@@ -150,3 +163,76 @@ async def remove_a(name:str,Ticker:str):
         'name':name,
         'Ticker':Ticker
     }
+@app.exception_handler(DuplicateTickerError)
+async def duplicate_exception_handler(req,exe):
+    return JSONResponse(
+        status_code=409,
+        content = {
+            "message": "Ticker already exists."
+        }
+
+    )
+@app.exception_handler(TickerNotFoundError)
+async def tickernotfound_handler(req,exe):
+    return JSONResponse(
+        status_code = 404,
+        content = {
+            "message": "Ticker not Found"
+        }
+    )
+@app.exception_handler(EmptyTickerError)
+async def emptyticker_handler(req,exe):
+    return JSONResponse(
+        status_code=422,
+        content = {
+            "message":"Entered an empty string for ticker"
+        }
+    )
+@app.exception_handler(TooLongTickerError)
+async def toolongticker_handler(req,exe):
+    return JSONResponse(
+        status_code=422,
+        content = {
+            "message":'Input is too long!'
+        }
+    )
+@app.exception_handler(InavlidTickerFormatError)
+async def invalidticker_handler(req,exe):
+   return  JSONResponse(
+        status_code=422,
+        content = {
+            "message":'Invalid ticker'
+        }
+    )
+@app.exception_handler(InvalidPeriodError)
+async def invalidperiod_handler(req,exe):
+   return  JSONResponse(
+        status_code = 400,
+        content = {
+            "message":'Period is too long'
+        }
+    )
+@app.exception_handler(AlertDoesNotExist)
+async def alertdoesnotexist_handler(req,exe):
+   return  JSONResponse(
+        status_code=404,
+        content = {
+            "message":"Alert is not found "
+        }
+    )
+@app.exception_handler(DuplicateAlertError)
+async def duplicate_exception_handler(req,exe):
+    return JSONResponse(
+        status_code= 409,
+        content = {
+            "message": "Alert already exists"
+        }
+    )
+@app.exception_handler(TransactionNotFoundError)
+async def transaction_Not_Found_Error(req,exe):
+    return JSONResponse(
+        status_code=404,
+        content = {
+            "message": 'This transaction has not been made'
+        }
+    )

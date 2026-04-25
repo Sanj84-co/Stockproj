@@ -16,6 +16,11 @@ with sqlite3.connect("store.db") as con: # need to create and actually connect t
     except sqlite3.OperationalError:
         print('Already exists')
         pass #sqlite does not support if exists and so you need to use a try except block. sqlite doe 
+    try:
+        cur.execute('ALTER TABLE transactions ADD COLUMN status TEXT')#creates a status column for transactions in case it gets sold.
+    except sqlite3.OperationalError:
+        print('Status already exists')
+        pass 
     con.commit()
 def get_id(name):
     with sqlite3.connect('store.db') as con:
@@ -65,12 +70,29 @@ def create_user(Name,email,time_joined):
         cur = con.cursor()
         cur.execute('INSERT INTO user(Name, time_joined,email)VALUES(?,?,?)',(Name,str(time_joined),email))
         con.commit()
+def get_transaction_id(user_id,ticker):
+    with sqlite3.connect('store.db') as con:
+        cur = con.cursor()
+        cur.execute('SELECT transaction_id FROM transactions WHERE user_id = ? AND ticker = ?',(user_id,ticker))
+        a = cur.fetchone()
+        return a[0]
 def add_transactions(user_id,ticker,shares):
     purchase_price = scrape.currentP(ticker)
     with sqlite3.connect('store.db') as con:
         cur = con.cursor()
-        cur.execute('INSERT INTO transactions(user_id,ticker,Shares,purchase_price,created_date)VALUES(?,?,?,?,?)',(user_id,ticker,shares,purchase_price,date.today()))
+        cur.execute('INSERT INTO transactions(user_id,ticker,Shares,purchase_price,created_date,status)VALUES(?,?,?,?,?,?)',(user_id,ticker,shares,purchase_price,date.today(),'Bought'))
         con.commit()
+def sell_transaction(user_id,transaction_id):
+    with sqlite3.connect('store.db') as con:
+        cur = con.cursor()
+        cur.execute('SELECT * FROM transactions WHERE user_id = ? AND transaction_id = ?',(user_id,transaction_id))
+        a = cur.fetchall()
+        if not a:
+            raise TransactionNotFoundError('Transaction does not exist')
+        else:
+            cur.execute("UPDATE transactions SET status = 'Sold' WHERE user_id = ? AND transaction_id = ? ",(user_id,transaction_id))
+        con.commit()
+
 def view_transactions(user_id):
     with sqlite3.connect('store.db') as con:
         cur = con.cursor()
@@ -88,7 +110,12 @@ def view_alerts(user_id):
 def add_alerts(user_id, Ticker, threshold_price):
     with sqlite3.connect('store.db') as con:
         cur = con.cursor()
-        cur.execute('INSERT INTO alerts(user_id,Ticker,threshold_price,status)VALUES(?,?,?,?)',(user_id,Ticker,threshold_price,'Activated'))
+        cur.execute('SELECT * FROM alerts WHERE user_id = ? AND ticker = ?',(user_id,Ticker))
+        a = cur.fetchone()
+        if a:
+            raise DuplicateAlertError('Alert already exists')
+        else:
+            cur.execute('INSERT INTO alerts(user_id,Ticker,threshold_price,status)VALUES(?,?,?,?)',(user_id,Ticker,threshold_price,'Activated'))
         con.commit()
 def remove_alerts(Ticker,user_id):
     with sqlite3.connect('store.db') as con:
@@ -104,7 +131,7 @@ def remove_alerts(Ticker,user_id):
 def change_status(user_id,Ticker):
     with sqlite3.connect('store.db') as con:
         cur = con.cursor()
-        cur.execute("UPDATE alerts SET status = 'activated' WHERE user_id = ? AND Ticker = ?",(user_id,Ticker))
+        cur.execute("UPDATE alerts SET status = 'passed' WHERE user_id = ? AND Ticker = ?",(user_id,Ticker))
         con.commit()# it should get called internally whenever it is activated
 def view_allalerts():
     with sqlite3.connect('store.db') as con:

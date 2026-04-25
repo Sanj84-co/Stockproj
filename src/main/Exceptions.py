@@ -12,3 +12,7 @@ class InvalidPeriodError(Exception):
     pass
 class AlertDoesNotExist(Exception):
     pass
+class DuplicateAlertError(Exception):
+    pass
+class TransactionNotFoundError(Exception):
+    pass 

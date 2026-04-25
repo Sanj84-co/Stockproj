@@ -13,3 +13,1748 @@ INFO:apscheduler.scheduler:Scheduler has been shut down
 DEBUG:apscheduler.scheduler:Looking for jobs to run
 DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
 INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:13:52.644125-04:00 (in 59.999738 seconds)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:13:52 EDT)" (scheduled at 2026-04-12 17:13:52.644125-04:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:14:52.644125-04:00 (in 59.989562 seconds)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:14:52 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:15:52.644125-04:00 (in 59.993707 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:15:52 EDT)" (scheduled at 2026-04-12 17:14:52.644125-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:15:52 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:16:52.644125-04:00 (in 59.993031 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:16:52 EDT)" (scheduled at 2026-04-12 17:15:52.644125-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:16:52 EDT)" executed successfully
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:17:44.640675-04:00 (in 59.999746 seconds)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:17:44 EDT)" (scheduled at 2026-04-12 17:17:44.640675-04:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:18:44.640675-04:00 (in 59.993745 seconds)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:18:44 EDT)" executed successfully
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:19:44.147950-04:00 (in 59.999767 seconds)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:19:44 EDT)" (scheduled at 2026-04-12 17:19:44.147950-04:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:20:44.147950-04:00 (in 59.991846 seconds)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:20:44 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:21:44.147950-04:00 (in 59.992338 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:21:44 EDT)" (scheduled at 2026-04-12 17:20:44.147950-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:21:44 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:22:44.147950-04:00 (in 59.994559 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:22:44 EDT)" (scheduled at 2026-04-12 17:21:44.147950-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:22:44 EDT)" executed successfully
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:23:08.324775-04:00 (in 59.999721 seconds)
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:23:53.613559-04:00 (in 59.999771 seconds)
+INFO:src.main.api:Server starts
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:24:53.846166-04:00 (in 59.999723 seconds)
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:24:53 EDT)" (scheduled at 2026-04-12 17:24:53.846166-04:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:25:53.846166-04:00 (in 59.992831 seconds)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:25:53 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:26:53.846166-04:00 (in 59.994834 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:26:53 EDT)" (scheduled at 2026-04-12 17:25:53.846166-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:26:53 EDT)" executed successfully
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:27:52.406095-04:00 (in 59.999724 seconds)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:27:52 EDT)" (scheduled at 2026-04-12 17:27:52.406095-04:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:28:52.406095-04:00 (in 59.993803 seconds)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:28:52 EDT)" executed successfully
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:29:33.033035-04:00 (in 59.999728 seconds)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:29:33 EDT)" (scheduled at 2026-04-12 17:29:33.033035-04:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:30:33.033035-04:00 (in 59.993487 seconds)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:30:33 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:31:33.033035-04:00 (in 59.994345 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:31:33 EDT)" (scheduled at 2026-04-12 17:30:33.033035-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:31:33 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:42:33.033035-04:00 (in 19.009832 seconds)
+WARNING:apscheduler.executors.default:Run time of job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:42:33 EDT)" was missed by 0:00:40.990371
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:43:25.913966-04:00 (in 59.999726 seconds)
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:43:36.722474-04:00 (in 59.999736 seconds)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:43:36 EDT)" (scheduled at 2026-04-12 17:43:36.722474-04:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:44:36.722474-04:00 (in 59.993160 seconds)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:44:36 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:45:36.722474-04:00 (in 59.995796 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:45:36 EDT)" (scheduled at 2026-04-12 17:44:36.722474-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:45:36 EDT)" executed successfully
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:45:59.220060-04:00 (in 59.999729 seconds)
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:46:16.951957-04:00 (in 59.999739 seconds)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:46:16 EDT)" (scheduled at 2026-04-12 17:46:16.951957-04:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:47:16.951957-04:00 (in 59.992398 seconds)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:47:16 EDT)" executed successfully
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:47:53.778961-04:00 (in 59.999751 seconds)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:47:53 EDT)" (scheduled at 2026-04-12 17:47:53.778961-04:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:48:53.778961-04:00 (in 59.993295 seconds)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:48:53 EDT)" executed successfully
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:49:13.676961-04:00 (in 59.999743 seconds)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:49:13 EDT)" (scheduled at 2026-04-12 17:49:13.676961-04:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:50:13.676961-04:00 (in 59.992823 seconds)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:50:13 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:51:13.676961-04:00 (in 59.992731 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:51:13 EDT)" (scheduled at 2026-04-12 17:50:13.676961-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:51:13 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:52:13.676961-04:00 (in 59.995675 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:52:13 EDT)" (scheduled at 2026-04-12 17:51:13.676961-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:52:13 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:53:13.676961-04:00 (in 59.993732 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:53:13 EDT)" (scheduled at 2026-04-12 17:52:13.676961-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:53:13 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:54:13.676961-04:00 (in 59.994310 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:54:13 EDT)" (scheduled at 2026-04-12 17:53:13.676961-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:54:13 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:55:13.676961-04:00 (in 59.998778 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:55:13 EDT)" (scheduled at 2026-04-12 17:54:13.676961-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:55:13 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:56:13.676961-04:00 (in 59.994714 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:56:13 EDT)" (scheduled at 2026-04-12 17:55:13.676961-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:56:13 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:57:13.676961-04:00 (in 59.994752 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:57:13 EDT)" (scheduled at 2026-04-12 17:56:13.676961-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:57:13 EDT)" executed successfully
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:57:19.864550-04:00 (in 59.999748 seconds)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:57:19 EDT)" (scheduled at 2026-04-12 17:57:19.864550-04:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:58:19.864550-04:00 (in 59.991742 seconds)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:58:19 EDT)" executed successfully
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:58:24.615801-04:00 (in 59.999747 seconds)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:58:24 EDT)" (scheduled at 2026-04-12 17:58:24.615801-04:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 17:59:24.615801-04:00 (in 59.992704 seconds)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 17:59:24 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:00:24.615801-04:00 (in 59.994015 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:00:24 EDT)" (scheduled at 2026-04-12 17:59:24.615801-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:00:24 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:01:24.615801-04:00 (in 59.995746 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:01:24 EDT)" (scheduled at 2026-04-12 18:00:24.615801-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:01:24 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:02:24.615801-04:00 (in 59.994115 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:02:24 EDT)" (scheduled at 2026-04-12 18:01:24.615801-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:02:24 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:03:24.615801-04:00 (in 59.995149 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:03:24 EDT)" (scheduled at 2026-04-12 18:02:24.615801-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:03:24 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:04:24.615801-04:00 (in 59.994311 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:04:24 EDT)" (scheduled at 2026-04-12 18:03:24.615801-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:04:24 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:05:24.615801-04:00 (in 59.995492 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:05:24 EDT)" (scheduled at 2026-04-12 18:04:24.615801-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:05:24 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:06:24.615801-04:00 (in 59.993985 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:06:24 EDT)" (scheduled at 2026-04-12 18:05:24.615801-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:06:24 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:07:24.615801-04:00 (in 59.999177 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:07:24 EDT)" (scheduled at 2026-04-12 18:06:24.615801-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:07:24 EDT)" executed successfully
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:07:36.765004-04:00 (in 59.999556 seconds)
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:09:26.495512-04:00 (in 59.999655 seconds)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:09:26 EDT)" (scheduled at 2026-04-12 18:09:26.495512-04:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:10:26.495512-04:00 (in 59.993364 seconds)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:10:26 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:11:26.495512-04:00 (in 59.998848 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:11:26 EDT)" (scheduled at 2026-04-12 18:10:26.495512-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:11:26 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:12:26.495512-04:00 (in 59.994867 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:12:26 EDT)" (scheduled at 2026-04-12 18:11:26.495512-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:12:26 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:13:26.495512-04:00 (in 59.994210 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:13:26 EDT)" (scheduled at 2026-04-12 18:12:26.495512-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:13:26 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:14:26.495512-04:00 (in 59.996759 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:14:26 EDT)" (scheduled at 2026-04-12 18:13:26.495512-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:14:26 EDT)" executed successfully
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:15:27.250473-04:00 (in 59.999695 seconds)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:15:27 EDT)" (scheduled at 2026-04-12 18:15:27.250473-04:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:16:27.250473-04:00 (in 59.994197 seconds)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:16:27 EDT)" executed successfully
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:16:45.004481-04:00 (in 59.999744 seconds)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:16:45 EDT)" (scheduled at 2026-04-12 18:16:45.004481-04:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:17:45.004481-04:00 (in 59.993348 seconds)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:17:45 EDT)" executed successfully
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:18:31.910083-04:00 (in 59.999716 seconds)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:18:31 EDT)" (scheduled at 2026-04-12 18:18:31.910083-04:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:19:31.910083-04:00 (in 59.993670 seconds)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:19:31 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:20:31.910083-04:00 (in 59.994016 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:20:31 EDT)" (scheduled at 2026-04-12 18:19:31.910083-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:20:31 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:21:31.910083-04:00 (in 59.993725 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:21:31 EDT)" (scheduled at 2026-04-12 18:20:31.910083-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:21:31 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:22:31.910083-04:00 (in 59.997660 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:22:31 EDT)" (scheduled at 2026-04-12 18:21:31.910083-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:22:31 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:23:31.910083-04:00 (in 59.993146 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:23:31 EDT)" (scheduled at 2026-04-12 18:22:31.910083-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:23:31 EDT)" executed successfully
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:24:22.435268-04:00 (in 59.999767 seconds)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:24:22 EDT)" (scheduled at 2026-04-12 18:24:22.435268-04:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:25:22.435268-04:00 (in 59.994067 seconds)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:25:22 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:26:22.435268-04:00 (in 59.994775 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:26:22 EDT)" (scheduled at 2026-04-12 18:25:22.435268-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:26:22 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:27:22.435268-04:00 (in 59.993678 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:27:22 EDT)" (scheduled at 2026-04-12 18:26:22.435268-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:27:22 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:28:22.435268-04:00 (in 59.994894 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:28:22 EDT)" (scheduled at 2026-04-12 18:27:22.435268-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:28:22 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:29:22.435268-04:00 (in 59.995914 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:29:22 EDT)" (scheduled at 2026-04-12 18:28:22.435268-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:29:22 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:30:22.435268-04:00 (in 59.996058 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:30:22 EDT)" (scheduled at 2026-04-12 18:29:22.435268-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:30:22 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:31:22.435268-04:00 (in 59.996742 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:31:22 EDT)" (scheduled at 2026-04-12 18:30:22.435268-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:31:22 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:32:22.435268-04:00 (in 59.995976 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:32:22 EDT)" (scheduled at 2026-04-12 18:31:22.435268-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:32:22 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:34:22.435268-04:00 (in 22.650148 seconds)
+WARNING:apscheduler.executors.default:Run time of job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:34:22 EDT)" was missed by 0:00:37.349999
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:35:22.435268-04:00 (in 59.996092 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:35:22 EDT)" (scheduled at 2026-04-12 18:34:22.435268-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:35:22 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:36:22.435268-04:00 (in 59.989420 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:36:22 EDT)" (scheduled at 2026-04-12 18:35:22.435268-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:36:22 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:44:22.435268-04:00 (in 57.668373 seconds)
+WARNING:apscheduler.executors.default:Run time of job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:44:22 EDT)" was missed by 0:00:02.331820
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-12 18:45:22.435268-04:00 (in 59.991659 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:45:22 EDT)" (scheduled at 2026-04-12 18:44:22.435268-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-12 18:45:22 EDT)" executed successfully
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:13:10.699847-04:00 (in 59.999733 seconds)
+DEBUG:yfinance:get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/MSFT
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/MSFT
+DEBUG:yfinance:params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'MSFT'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:     Entering _load_cookie_curlCffi()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['curlCffi', 1, 0])
+DEBUG:yfinance:     Exiting _load_cookie_curlCffi()
+DEBUG:yfinance:reusing persistent cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:     Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:     Exiting _get_cookie_basic()
+DEBUG:yfinance:crumb = 'LIxyFM69m3p'
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:params={'symbols': 'MSFT', 'formatted': 'false'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/MSFT?symbol=MSFT&type=trailingPegRatio&period1=1760400000&period2=1776211200
+DEBUG:yfinance:params=None
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL
+DEBUG:yfinance:params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'AAPL'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:params={'symbols': 'AAPL', 'formatted': 'false'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/AAPL?symbol=AAPL&type=trailingPegRatio&period1=1760400000&period2=1776211200
+DEBUG:yfinance:params=None
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-14 18:13:10 EDT)" (scheduled at 2026-04-14 18:13:10.699847-04:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:14:10.699847-04:00 (in 59.993133 seconds)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-14 18:14:10 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:15:10.699847-04:00 (in 59.995054 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-14 18:15:10 EDT)" (scheduled at 2026-04-14 18:14:10.699847-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-14 18:15:10 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:16:10.699847-04:00 (in 59.992975 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-14 18:16:10 EDT)" (scheduled at 2026-04-14 18:15:10.699847-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-14 18:16:10 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:17:10.699847-04:00 (in 59.992979 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-14 18:17:10 EDT)" (scheduled at 2026-04-14 18:16:10.699847-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-14 18:17:10 EDT)" executed successfully
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:17:54.071892-04:00 (in 59.999748 seconds)
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:18:18.151753-04:00 (in 59.999716 seconds)
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:18:53.847747-04:00 (in 59.999712 seconds)
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:19:11.749299-04:00 (in 59.999700 seconds)
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:19:27.369744-04:00 (in 59.999746 seconds)
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:20:23.066948-04:00 (in 59.999718 seconds)
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:20:31.758841-04:00 (in 59.999738 seconds)
+DEBUG:yfinance:get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/MSFT
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/MSFT
+DEBUG:yfinance:params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'MSFT'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:     Entering _load_cookie_curlCffi()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['curlCffi', 1, 0])
+DEBUG:yfinance:     Exiting _load_cookie_curlCffi()
+DEBUG:yfinance:reusing persistent cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:     Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:     Exiting _get_cookie_basic()
+DEBUG:yfinance:crumb = 'LIxyFM69m3p'
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:params={'symbols': 'MSFT', 'formatted': 'false'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/MSFT?symbol=MSFT&type=trailingPegRatio&period1=1760400000&period2=1776211200
+DEBUG:yfinance:params=None
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL
+DEBUG:yfinance:params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'AAPL'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:params={'symbols': 'AAPL', 'formatted': 'false'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/AAPL?symbol=AAPL&type=trailingPegRatio&period1=1760400000&period2=1776211200
+DEBUG:yfinance:params=None
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-14 18:20:31 EDT)" (scheduled at 2026-04-14 18:20:31.758841-04:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:21:31.758841-04:00 (in 59.995391 seconds)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-14 18:21:31 EDT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:22:31.758841-04:00 (in 59.993407 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-14 18:22:31 EDT)" (scheduled at 2026-04-14 18:21:31.758841-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-14 18:22:31 EDT)" executed successfully
+DEBUG:yfinance:get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMD
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMD
+DEBUG:yfinance:params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'AMD'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:params={'symbols': 'AMD', 'formatted': 'false'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/AMD?symbol=AMD&type=trailingPegRatio&period1=1760400000&period2=1776211200
+DEBUG:yfinance:params=None
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/MSFT
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/MSFT
+DEBUG:yfinance:params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'MSFT'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:params={'symbols': 'MSFT', 'formatted': 'false'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL
+DEBUG:yfinance:params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'AAPL'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:params={'symbols': 'AAPL', 'formatted': 'false'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMD
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMD
+DEBUG:yfinance:params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'AMD'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:params={'symbols': 'AMD', 'formatted': 'false'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:23:31.758841-04:00 (in 59.994273 seconds)
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-14 18:23:31 EDT)" (scheduled at 2026-04-14 18:22:31.758841-04:00)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-14 18:23:31 EDT)" executed successfully
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:23:33.508450-04:00 (in 59.999427 seconds)
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:23:51.730739-04:00 (in 59.997663 seconds)
+DEBUG:yfinance:get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/MSFT
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/MSFT
+DEBUG:yfinance:params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'MSFT'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:     Entering _load_cookie_curlCffi()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['curlCffi', 1, 0])
+DEBUG:yfinance:     Exiting _load_cookie_curlCffi()
+DEBUG:yfinance:reusing persistent cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:     Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:     Exiting _get_cookie_basic()
+DEBUG:yfinance:crumb = 'LIxyFM69m3p'
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:params={'symbols': 'MSFT', 'formatted': 'false'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/MSFT?symbol=MSFT&type=trailingPegRatio&period1=1760400000&period2=1776211200
+DEBUG:yfinance:params=None
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL
+DEBUG:yfinance:params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'AAPL'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:params={'symbols': 'AAPL', 'formatted': 'false'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/AAPL?symbol=AAPL&type=trailingPegRatio&period1=1760400000&period2=1776211200
+DEBUG:yfinance:params=None
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMD
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMD
+DEBUG:yfinance:params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'AMD'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:params={'symbols': 'AMD', 'formatted': 'false'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/AMD?symbol=AMD&type=trailingPegRatio&period1=1760400000&period2=1776211200
+DEBUG:yfinance:params=None
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/MSFT
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/MSFT
+DEBUG:yfinance:params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'MSFT'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:params={'symbols': 'MSFT', 'formatted': 'false'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL
+DEBUG:yfinance:params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'AAPL'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:params={'symbols': 'AAPL', 'formatted': 'false'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMD
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMD
+DEBUG:yfinance:params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'AMD'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:params={'symbols': 'AMD', 'formatted': 'false'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:24:33.899294-04:00 (in 59.996241 seconds)
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:24:44.609117-04:00 (in 59.996825 seconds)
+DEBUG:yfinance:get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/MSFT
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/MSFT
+DEBUG:yfinance:params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'MSFT'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:     Entering _load_cookie_curlCffi()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['curlCffi', 1, 0])
+DEBUG:yfinance:     Exiting _load_cookie_curlCffi()
+DEBUG:yfinance:reusing persistent cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:     Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:     Exiting _get_cookie_basic()
+DEBUG:yfinance:crumb = 'LIxyFM69m3p'
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:params={'symbols': 'MSFT', 'formatted': 'false'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/MSFT?symbol=MSFT&type=trailingPegRatio&period1=1760400000&period2=1776211200
+DEBUG:yfinance:params=None
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL
+DEBUG:yfinance:params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'AAPL'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:params={'symbols': 'AAPL', 'formatted': 'false'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/AAPL?symbol=AAPL&type=trailingPegRatio&period1=1760400000&period2=1776211200
+DEBUG:yfinance:params=None
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMD
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMD
+DEBUG:yfinance:params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'AMD'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:params={'symbols': 'AMD', 'formatted': 'false'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/AMD?symbol=AMD&type=trailingPegRatio&period1=1760400000&period2=1776211200
+DEBUG:yfinance:params=None
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/MSFT
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/MSFT
+DEBUG:yfinance:params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'MSFT'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:params={'symbols': 'MSFT', 'formatted': 'false'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL
+DEBUG:yfinance:params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'AAPL'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:params={'symbols': 'AAPL', 'formatted': 'false'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMD
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMD
+DEBUG:yfinance:params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'AMD'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:yfinance:get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:Entering get()
+DEBUG:yfinance: Entering _make_request()
+DEBUG:yfinance:url=https://query1.finance.yahoo.com/v7/finance/quote?
+DEBUG:yfinance:params={'symbols': 'AMD', 'formatted': 'false'}
+DEBUG:yfinance:  Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:   Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Entering _get_cookie_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:    Exiting _get_cookie_basic()
+DEBUG:yfinance:    Entering _get_crumb_basic()
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:    Exiting _get_crumb_basic()
+DEBUG:yfinance:   Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:  Exiting _get_cookie_and_crumb()
+DEBUG:yfinance:response code=200
+DEBUG:yfinance: Exiting _make_request()
+DEBUG:yfinance:Exiting get()
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-14 18:24:44 EDT)" (scheduled at 2026-04-14 18:24:44.609117-04:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:25:44.609117-04:00 (in 59.870035 seconds)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-14 18:25:44 EDT)" executed successfully
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
+DEBUG:src.main.api:First debugging statement
+DEBUG:tzlocal:/etc/localtime found
+DEBUG:tzlocal:1 found:
+ {'/etc/localtime is a symlink to': 'America/New_York'}
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "alert_noti" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:25:57.368002-04:00 (in 59.996819 seconds)
+INFO:src.main.api:Server starts
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-14 18:25:57 EDT)" (scheduled at 2026-04-14 18:25:57.368002-04:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2026-04-14 18:26:57.368002-04:00 (in 59.998234 seconds)
+INFO:apscheduler.executors.default:Job "alert_noti (trigger: interval[0:01:00], next run at: 2026-04-14 18:26:57 EDT)" executed successfully
+INFO:apscheduler.scheduler:Scheduler has been shut down
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:No jobs; waiting until a job is added
+INFO:src.main.api:Server shuts down
