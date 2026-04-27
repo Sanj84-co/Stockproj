@@ -3,6 +3,8 @@ from src.main.Exceptions import *
 from src.main.watchlist import checkTicker
 from datetime import date
 from src.fetch import scrape
+from passlib.context import CryptContext
+pwd_context = CryptContext(schemes=['bcrypt'],deprecated= "auto")#abject that has bcrypt has its hashing method.
 with sqlite3.connect("data/store.db") as con: # need to create and actually connect to the database. conec
     cur = con.cursor() # to make the queries this is waht you need to do.
     cur.execute("CREATE TABLE IF NOT EXISTS user(user_id INTEGER PRIMARY KEY AUTOINCREMENT, Name TEXT,time_joined TEXT)")
@@ -21,6 +23,11 @@ with sqlite3.connect("data/store.db") as con: # need to create and actually conn
     except sqlite3.OperationalError:
         print('Status already exists')
         pass 
+    try:
+        cur.execute('ALTER TABLE user ADD COLUMN password TEXT')
+    except sqlite3.OperationalError:
+        print('Column already exists')
+        pass 
     con.commit()
 def get_id(name):
     with sqlite3.connect('data/store.db') as con:
@@ -34,6 +41,12 @@ def retrieve_profile(user_id):
         cur = con.cursor()
         cur.execute('SELECT * FROM user WHERE user_id = ?',(user_id,))
         a= cur.fetchone()
+        return a
+def get_user_by_email(email):
+    with sqlite3.connect('data/store.db') as con:
+        cur = con.cursor()
+        cur.execute('SELECT * FROM user WHERE email = ?',(email,))
+        a = cur.fetchone()
         return a
 def get_user(user_id):
     with sqlite3.connect('data/store.db') as con:
@@ -65,10 +78,11 @@ def remove(ticker,user_id): # permantely save the change # needs user_id or will
         else:
             cur.execute('DELETE FROM watchlist WHERE ticker = ? AND user_id = ?',(ticker,user_id))
         con.commit()
-def create_user(Name,email,time_joined):
+def create_user(Name,email,password, time_joined):
     with sqlite3.connect('data/store.db') as con: # connection automatically closes each time
         cur = con.cursor()
-        cur.execute('INSERT INTO user(Name, time_joined,email)VALUES(?,?,?)',(Name,str(time_joined),email))
+        hashed_password = pwd_context.hash(password)#the object hashes the pasword into random characters. 
+        cur.execute('INSERT INTO user(Name, time_joined,email,password)VALUES(?,?,?,?)',(Name,str(time_joined),email,hashed_password))
         con.commit()
 def get_transaction_id(user_id,ticker):
     with sqlite3.connect('data/store.db') as con:

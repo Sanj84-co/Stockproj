@@ -128,6 +128,7 @@ def cached_checker(ticker):
 def retrieve_recommendation(Ticker):
     start = date.today()- timedelta(days = 30)
     df = take(Ticker,start)
-    Stock = i.stockalgo(df['Close'])
+    Stock = i.stockalgo(df['Close'][Ticker])# have to slice it can also use.xs
+
     Stock.Rsi()
     return Stock.recommend()

@@ -26,7 +26,7 @@ Stockproj/
 ├── conftest.py                 # Makes project root discoverable by pytest
 ├── data/
 │   └── store.db                # SQLite database
-└── .env                        # EMAIL_ID, EMAIL_PASSWORD (not committed)
+└── .env                        # EMAIL_ID, EMAIL_PASSWORD, SECRET_KEY (not committed)
 ```
 
 ---
@@ -40,6 +40,7 @@ Stockproj/
 | Name        | TEXT    |                             |
 | time_joined | TEXT    |                             |
 | email       | TEXT    | Added via ALTER TABLE       |
+| password    | TEXT    | bcrypt hash, added via ALTER TABLE |
 
 **watchlist**
 | Column     | Type    | Notes                          |
@@ -73,38 +74,45 @@ Stockproj/
 
 ## API Endpoints
 
+All endpoints except `/users` and `/login` require `Authorization: Bearer <token>` header.
+
+### Auth
+| Method | Path     | Body                       | Returns              |
+|--------|----------|----------------------------|----------------------|
+| POST   | /users   | `{name, email, password}`  | `{name, user_id}`    |
+| POST   | /login   | `{email, password}`        | `{key: <JWT token>}` |
+
 ### Users
-| Method | Path          | Body / Params    | Returns               |
-|--------|---------------|------------------|-----------------------|
-| POST   | /users        | `{name, email}`  | `{name, user_id}`     |
-| GET    | /users/{name} | path: name       | `{name, user_id}`     |
-| GET    | /user/{name}  | path: name       | `{name, email}`       |
+| Method | Path          | Auth | Returns               |
+|--------|---------------|------|-----------------------|
+| GET    | /users/{name} | No   | `{name, user_id}`     |
+| GET    | /user/{name}  | No   | `{name, email}`       |
 
 ### Watchlist
-| Method | Path                       | Body / Params    | Returns                                        |
-|--------|----------------------------|------------------|------------------------------------------------|
-| GET    | /watchlist/{name}          | path: name       | `{watchlist: [{Stock, Time-added}]}`           |
-| POST   | /watchlist                 | `{name, Ticker}` | `{Ticker, Date-added}`                         |
-| DELETE | /watchlist/{name}/{Ticker} | path: name, Ticker | `{Ticker, Date-Removed}`                     |
+| Method | Path               | Body / Params    | Returns                              |
+|--------|--------------------|------------------|--------------------------------------|
+| GET    | /watchlist         | —                | `{watchlist: [{Stock, Time-added}]}` |
+| POST   | /watchlist         | `{name, Ticker}` | `{Ticker, Date-added}`               |
+| DELETE | /watchlist/{Ticker}| path: Ticker     | `{Ticker, Date-Removed}`             |
 
 ### Transactions
-| Method | Path                           | Body / Params            | Returns                                                           |
-|--------|--------------------------------|--------------------------|-------------------------------------------------------------------|
-| GET    | /transactions/{name}           | path: name               | `{transactions: [{Ticker, shares, Bought Price, Current Price, PnL, Status}]}` |
-| POST   | /transactions                  | `{name, Ticker, shares}` | `{transaction: {Name, Ticker, Shares, Status}}`                   |
-| DELETE | /transactions/{name}/{ticker}  | path: name, ticker       | `{name, ticker}`                                                  |
+| Method | Path                      | Body / Params          | Returns                                                           |
+|--------|---------------------------|------------------------|-------------------------------------------------------------------|
+| GET    | /transactions             | —                      | `{transactions: [{Ticker, shares, Bought Price, Current Price, PnL, Status}]}` |
+| POST   | /transactions             | `{Ticker, shares}`     | `{transaction: {Ticker, Shares, Status}}`                         |
+| DELETE | /transactions/{ticker}    | path: ticker           | `{ticker}`                                                        |
 
 ### Alerts
-| Method | Path                    | Body / Params                  | Returns                                          |
-|--------|-------------------------|--------------------------------|--------------------------------------------------|
-| GET    | /alerts/{Name}          | path: Name                     | `{alerts: [{name, Ticker, Threshold, Status}]}`  |
-| POST   | /alerts                 | `{name, Ticker, threshold}`    | `{name, Ticker, threshold}`                      |
-| DELETE | /alerts/{name}/{Ticker} | path: name, Ticker             | `{name, Ticker}`                                 |
+| Method | Path              | Body / Params              | Returns                                          |
+|--------|-------------------|----------------------------|--------------------------------------------------|
+| GET    | /alerts           | —                          | `{alerts: [{Ticker, Threshold, Status}]}`        |
+| POST   | /alerts           | `{Ticker, threshold}`      | `{Ticker, threshold}`                            |
+| DELETE | /alerts/{Ticker}  | path: Ticker               | `{Ticker}`                                       |
 
 ### AI Recommendation
-| Method | Path                     | Params             | Returns                                    |
-|--------|--------------------------|--------------------|--------------------------------------------|
-| GET    | /Review/{name}/{Ticker}  | path: name, Ticker | String: Buy / Hold / Sell recommendation   |
+| Method | Path            | Params       | Returns                                  |
+|--------|-----------------|--------------|------------------------------------------|
+| GET    | /Review/{Ticker}| path: Ticker | String: Buy / Hold / Sell recommendation |
 
 ---
 
@@ -213,6 +221,29 @@ Global exception handlers registered with `@app.exception_handler()`:
 
 ---
 
+## Authentication (api.py)
+
+### Registration (`POST /users`)
+- Accepts `{name, email, password}`
+- Hashes password with bcrypt via `passlib.CryptContext` before storing
+- Library: `passlib[bcrypt]` (pinned to bcrypt==4.0.1 for passlib 1.7.4 compatibility)
+
+### Login (`POST /login`)
+- Looks up user by email via `get_user_by_email()`
+- Verifies password against stored hash with `pwd_context.verify()`
+- On success: returns JWT signed with `SECRET_KEY` (HS256), expires in 30 minutes
+- On failure: returns 401 Unauthorized
+- Token payload: `{"sub": user_id, "exp": now + 30min}`
+
+### Token Verification (`get_current_user`)
+- Dependency function used by all protected endpoints via `Depends(get_current_user)`
+- Reads `Authorization` header, strips `Bearer ` prefix
+- Decodes JWT with `jwt.decode()` using `SECRET_KEY` and `algorithms=["HS256"]`
+- Returns `user_id` string extracted from `payload["sub"]`
+- On invalid/expired token: catches `JWTError`, raises `HTTPException(401)`
+
+---
+
 ## Testing (tests/test.py)
 
 | Test | What it covers |
@@ -221,6 +252,9 @@ Global exception handlers registered with `@app.exception_handler()`:
 | `test_pnL()` | `pnL()` returns correct P&L against known inputs |
 | `test_shares()` | `pnL()` raises `TypeError` when shares is a string |
 | `test_alerts()` | `alert_noti()` triggers SMTP when price exceeds threshold (all external calls mocked) |
+| `test_recommend_overbought()` | RSI > 70 returns sell recommendation |
+| `test_recommend_hold()` | RSI 30-70 returns hold recommendation |
+| `test_recommend_oversold()` | RSI ≤ 30 returns buy recommendation |
 
 **Mocks used in `test_alerts`:**
 - `src.main.Back.cached_checker` → returns `302.0`
@@ -228,17 +262,17 @@ Global exception handlers registered with `@app.exception_handler()`:
 - `src.main.Back.retrieve_profile` → returns fake user row with email at last index
 - `src.main.Back.sm.SMTP` → asserts it was called (no real email sent)
 
+**Mocks used in RSI tests:**
+- `src.main.indicatorStock.stockalgo.Rsi` → patched as no-op so `self.rsi` set manually is not overwritten
+
 ---
 
 ## Known Issues
 
 | Issue | Impact |
 |-------|--------|
-| No JWT authentication | Any caller can act as any user — all endpoints are open |
-| `store.db` may be committed to GitHub | Exposes all user data publicly |
-| `/Review` endpoint bug | `if Ticker in check_watchlist` — `check_watchlist` is a bool, not iterable; raises `TypeError` at runtime |
 | `mVA()` in `stockalgo` is unused | `enumerate` returns tuples; adding them to `sum` would fail if called |
-| `test_alerts` threshold mismatch | Fake alert status is `'activated'` (lowercase) but `view_allalerts` filters for `'Activated'` — mock bypasses this but real data would not trigger |
+| `test_alerts` status mismatch | Fake alert status is `'activated'` (lowercase) but `view_allalerts` filters `'Activated'` — mock bypasses this |
 
 ---
 
@@ -246,7 +280,5 @@ Global exception handlers registered with `@app.exception_handler()`:
 
 | Phase | Items |
 |-------|-------|
-| **Now** | Fix `/Review` endpoint bug; add README |
-| **High value** | JWT authentication, add `.gitignore` for `store.db` |
-| **Week 5** | Expand AI layer (RSI already implemented) |
+| **Now** | Update README to reflect JWT and RSI layer |
 | **Week 6** | React frontend consuming these endpoints (optional) |
